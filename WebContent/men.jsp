@@ -1,5 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@page import="model.ChiTietSanPham"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="dao.ChiTietSanPhamDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -249,11 +252,12 @@
 				<div class="col-lg-9 mt-lg-0 mt-5 right-product-grid">
 					<!-- card group  -->
 					<div class="card-group">
-						<!-- card -->
+					<%ArrayList<ChiTietSanPham> cardsData = ChiTietSanPhamDAO.getCardsData(1); %>
+					<%for(int i = 0; i< cardsData.size(); i++){ %>
 						<div class="col-lg-3 col-sm-6 p-0">
 							<div class="card product-men p-3">
 								<div class="men-thumb-item">
-									<img src="images/pm1.jpg" alt="img" class="card-img-top">
+									<img src=<%=cardsData.get(i).getHinhAnh() %> alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
 											<a href="mens.html" class="link-product-add-cart">Quick
@@ -263,11 +267,10 @@
 								</div>
 								<!-- card body -->
 								<div class="card-body  py-3 px-2">
-									<h5 class="card-title text-capitalize">Solid Formal Black
-										Shirt</h5>
+									<h5 class="card-title text-capitalize"><%=cardsData.get(i).getTenSanPham() %></h5>
 									<div class="card-text d-flex justify-content-between">
-										<p class="text-dark font-weight-bold">$40.00</p>
-										<p class="line-through">$50.99</p>
+										<p class="text-dark font-weight-bold"><%=cardsData.get(i).getGiaGiam() %></p>
+										<p class="line-through"><%=cardsData.get(i).getGia() %></p>
 									</div>
 								</div>
 								<!-- card footer -->
@@ -286,6 +289,44 @@
 								</div>
 							</div>
 						</div>
+						<%} %>
+						<!-- card -->
+<!-- 						<div class="col-lg-3 col-sm-6 p-0"> -->
+<!-- 							<div class="card product-men p-3"> -->
+<!-- 								<div class="men-thumb-item"> -->
+<!-- 									<img src="images/pm1.jpg" alt="img" class="card-img-top"> -->
+<!-- 									<div class="men-cart-pro"> -->
+<!-- 										<div class="inner-men-cart-pro"> -->
+<!-- 											<a href="mens.html" class="link-product-add-cart">Quick -->
+<!-- 												View</a> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 								card body -->
+<!-- 								<div class="card-body  py-3 px-2"> -->
+<!-- 									<h5 class="card-title text-capitalize">Solid Formal Black -->
+<!-- 										Shirt</h5> -->
+<!-- 									<div class="card-text d-flex justify-content-between"> -->
+<!-- 										<p class="text-dark font-weight-bold">$40.00</p> -->
+<!-- 										<p class="line-through">$50.99</p> -->
+<!-- 									</div> -->
+<!-- 								</div> -->
+<!-- 								card footer -->
+<!-- 								<div class="card-footer d-flex justify-content-end"> -->
+<!-- 									<form action="#" method="post"> -->
+<!-- 										<input type="hidden" name="cmd" value="_cart"> <input -->
+<!-- 											type="hidden" name="add" value="1"> <input -->
+<!-- 											type="hidden" name="hub_item" -->
+<!-- 											value="Solid Formal Black Shirt"> <input -->
+<!-- 											type="hidden" name="amount" value="40.00"> -->
+<!-- 										<button type="submit" class="hub-cart phub-cart btn"> -->
+<!-- 											<i class="fa fa-cart-plus" aria-hidden="true"></i> -->
+<!-- 										</button> -->
+<!-- 										<a href="#" data-toggle="modal" data-target="#myModal1"></a> -->
+<!-- 									</form> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
 						<!-- //card -->
 						<!-- card -->
 						<div class="col-lg-3 col-sm-6 p-0">
