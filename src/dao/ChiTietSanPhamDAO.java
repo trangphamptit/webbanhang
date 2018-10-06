@@ -52,6 +52,28 @@ public class ChiTietSanPhamDAO {
 	        }
 		return list;
 	}
+	
+	public static ChiTietSanPham getChiTietSanPhamTheoMa(int maSP) throws SQLException {
+        Connection connection = KetNoi.getConnection();
+        String sql = "SELECT * FROM chitietsanpham WHERE maSanPham = ?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setInt(1, maSP);
+        ResultSet rs = ps.executeQuery();
+        ChiTietSanPham sanPham = new ChiTietSanPham();
+        while (rs.next()) {
+            sanPham.setMaSanPham(rs.getInt("maSanPham"));
+            sanPham.setTenSanPham(rs.getString("tenSanPham"));
+            sanPham.setHinhAnh(rs.getString("hinhAnh"));
+            sanPham.setGia(rs.getInt("gia"));
+            sanPham.setGiaGiam(rs.getLong("giaGiam"));
+            sanPham.setHinhAnh(rs.getString("hinhAnh"));
+            sanPham.setChiTiet(rs.getString("chiTiet"));
+            sanPham.setNgay(rs.getDate("ngay"));
+            sanPham.setMaNhom(rs.getInt("maNhom"));
+        }
+        return sanPham;
+    }
+	
 	public static void main(String[] args) {
 		try {
 			ArrayList< ChiTietSanPham> sanPham= getChiTietSanPhamTheoNhom(1);
