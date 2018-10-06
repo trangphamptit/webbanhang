@@ -29,11 +29,10 @@ public class ChiTietDatHangDAO {
 			
 			//Step 4: Duyet du lieu
 			while(rs.next()){
-				int maChiTietDatHang = rs.getInt("maChiTietDatHang");
 				int maDatHang = rs.getInt("maDatHang");
 				int maSanPham = rs.getInt("maSanPham");
 				int soLuong = rs.getInt("soLuong");
-				ChiTietDatHang ctdh = new ChiTietDatHang(maChiTietDatHang, maDatHang, maSanPham, soLuong);
+				ChiTietDatHang ctdh = new ChiTietDatHang(maDatHang, maSanPham, soLuong);
 				ketQua.add(ctdh);
 			}
 			DBConnection.closeConnection(c);
@@ -59,11 +58,10 @@ public class ChiTietDatHangDAO {
 			
 			//Step 4: Duyet du lieu
 			while(rs.next()){
-				int maChiTietDatHang = rs.getInt("maChiTietDatHang");
 				int maDatHangDB = rs.getInt("maDatHang");
 				int maSanPham = rs.getInt("maSanPham");
 				int soLuong = rs.getInt("soLuong");
-				ChiTietDatHang ctdh = new ChiTietDatHang(maChiTietDatHang, maDatHangDB, maSanPham, soLuong);
+				ChiTietDatHang ctdh = new ChiTietDatHang(maDatHangDB, maSanPham, soLuong);
 				ketQua.add(ctdh);
 			}
 			DBConnection.closeConnection(c);
@@ -114,13 +112,12 @@ public class ChiTietDatHangDAO {
 			Connection c = createConnection();
 			
 			//Step 2: Create statement
-			String query = "insert into chitietdathang(maChiTietDatHang, maDatHang, maSanPham, soLuong) "
-					+ "value(?, ?, ?, ?)";
+			String query = "insert into chitietdathang(maDatHang, maSanPham, soLuong) "
+					+ "value(?, ?, ?)";
 			dbStatement = c.prepareStatement(query);
-			dbStatement.setInt(1, ctdh.getMaChiTietDatHang());
-			dbStatement.setInt(2, ctdh.getMaDatHang());
-			dbStatement.setInt(3, ctdh.getMaSanPham());
-			dbStatement.setInt(4, ctdh.getSoLuong());
+			dbStatement.setInt(1, ctdh.getMaDatHang());
+			dbStatement.setInt(2, ctdh.getMaSanPham());
+			dbStatement.setInt(3, ctdh.getSoLuong());
 			
 			//Step 3: Excute query
 			soDongThayDoi = dbStatement.executeUpdate();
@@ -138,9 +135,10 @@ public class ChiTietDatHangDAO {
 			Connection c = createConnection();
 			
 			//Step 2: Create statement
-			String query = "delete from menu where maMenu = ?";
+			String query = "delete from menu where maDatHang = ? and maSanPham = ?";
 			dbStatement = c.prepareStatement(query);
-			dbStatement.setInt(1, ctdh.getMaChiTietDatHang());
+			dbStatement.setInt(1, ctdh.getMaDatHang());
+			dbStatement.setInt(2, ctdh.getMaSanPham());
 			
 			//Step 3: Excute query
 			soDongThayDoi = dbStatement.executeUpdate();
@@ -158,10 +156,11 @@ public class ChiTietDatHangDAO {
 			Connection c = createConnection();
 			
 			//Step 2: Create statement
-			String query = "update menu set soLuong = ? where maChiTietDatHang = ?";
+			String query = "update menu set soLuong = ? where maDatHang = ? and maSanPham = ?";
 			dbStatement = c.prepareStatement(query);
 			dbStatement.setInt(1, chiTietDatHang.getSoLuong());
-			dbStatement.setInt(2, chiTietDatHang.getMaChiTietDatHang());
+			dbStatement.setInt(2, chiTietDatHang.getMaDatHang());
+			dbStatement.setInt(3, chiTietDatHang.getMaSanPham());
 			//Step 3: Excute query
 			soDongThayDoi = dbStatement.executeUpdate();
 			DBConnection.closeConnection(c);
