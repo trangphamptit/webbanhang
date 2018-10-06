@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@page import="model.ChiTietSanPham"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -79,6 +80,7 @@
 				<div class="col-lg-4 single-right-left">
 					<div class="grid images_3_of_2">
 						<div class="flexslider1">
+						<%ChiTietSanPham sanPham = (ChiTietSanPham) request.getAttribute("sanPham");%>
 							<ul class="slides">
 								<li data-thumb="images/ms1.jpg">
 									<div class="thumb-image">
@@ -105,8 +107,7 @@
 				</div>
 				<div
 					class="col-lg-8 mt-lg-0 mt-5 single-right-left simpleCart_shelfItem">
-					<h3>ManQ Solid Single Breasted Wedding, Formal Men's Blazer
-						(Black)</h3>
+					<h3><%= sanPham.getTenSanPham() %></h3>
 					</h3>
 					<div class="caption">
 
@@ -128,14 +129,11 @@
 							</a></li>
 						</ul>
 						<div class="clearfix"></div>
-						<h6>$35.00</h6>
+						<h6><%= sanPham.getGiaGiam() %></h6>
 					</div>
 					<div class="desc_single">
-						<h5>Description</h5>
-						<p>Pellentesque quis orci sapien. Phasellus at pfero in nunc
-							egestas tincidunt. In dictum arcu purus, ultricies tincidunt urna
-							vehicula at. Aenean iaculis urna nec pfero scelerisque, ac
-							ullamcorper neque porta.</p>
+						<h5>Mô tả</h5>
+						<p><%= sanPham.getChiTiet() %></p>
 					</div>
 					<div class="d-sm-flex justify-content-between">
 						<div class="occasional">

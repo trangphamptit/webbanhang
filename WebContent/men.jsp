@@ -260,7 +260,7 @@
 									<img src=<%=cardsData.get(i).getHinhAnh() %> alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="/ChiTietAoQuanController?id="<%= cardsData.get(i).getMaSanPham()%> class="link-product-add-cart">Quick
+											<a href="Detail?id=<%= cardsData.get(i).getMaSanPham()%>" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>

@@ -44,6 +44,7 @@ public class ChiTietSanPhamDAO {
 	        ArrayList<ChiTietSanPham> list = new ArrayList<>();
 	        while (rs.next()) {
 				ChiTietSanPham sanPham = new ChiTietSanPham();
+				sanPham.setMaSanPham(rs.getInt("maSanPham"));
 	            sanPham.setTenSanPham(rs.getString("tenSanPham"));
 	            sanPham.setHinhAnh(rs.getString("hinhAnh"));
 	            sanPham.setGia(rs.getInt("gia"));
@@ -71,6 +72,7 @@ public class ChiTietSanPhamDAO {
             sanPham.setNgay(rs.getDate("ngay"));
             sanPham.setMaNhom(rs.getInt("maNhom"));
         }
+        connection.close();
         return sanPham;
     }
 	
