@@ -260,7 +260,7 @@
 									<img src=<%=cardsData.get(i).getHinhAnh() %> alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
+											<a href="/ChiTietAoQuanController?id="<%= cardsData.get(i).getMaSanPham()%> class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -279,8 +279,8 @@
 										<input type="hidden" name="cmd" value="_cart"> <input
 											type="hidden" name="add" value="1"> <input
 											type="hidden" name="hub_item"
-											value="Solid Formal Black Shirt"> <input
-											type="hidden" name="amount" value="40.00">
+											value=<%=cardsData.get(i).getTenSanPham() %>> <input
+											type="hidden" name="amount" value=<%=cardsData.get(i).getGiaGiam() %>>
 										<button type="submit" class="hub-cart phub-cart btn">
 											<i class="fa fa-cart-plus" aria-hidden="true"></i>
 										</button>
