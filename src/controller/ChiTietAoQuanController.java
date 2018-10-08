@@ -16,7 +16,7 @@ import model.ChiTietSanPham;
 /**
  * Servlet implementation class ChiTietAoQuanController
  */
-@WebServlet("/ChiTietAoQuanController")
+@WebServlet("/Detail")
 public class ChiTietAoQuanController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -31,8 +31,8 @@ public class ChiTietAoQuanController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int maSanPham = Integer.parseInt(request.getAttribute("id").toString());
 		try {
+			int maSanPham = Integer.parseInt(request.getParameter("id"));
 			ChiTietSanPham ctsp = ChiTietSanPhamDAO.getChiTietSanPhamTheoMa(maSanPham);
 			request.setAttribute("sanPham", ctsp);
 			RequestDispatcher rd = request.getRequestDispatcher("mens.jsp");
