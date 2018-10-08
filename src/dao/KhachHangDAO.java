@@ -71,7 +71,7 @@ package dao;
 				dbStatement.setDate(3, (Date) kh.getNgaySinh());
 				dbStatement.setString(4, kh.getDiaChi());
 				dbStatement.setString(5, kh.getSoDienThoai());
-				dbStatement.setString(2, kh.getEmail());
+				dbStatement.setString(6, kh.getEmail());
 				
 				soDongThayDoi = dbStatement.executeUpdate();
 				DBConnection.closeConnection(c);
@@ -89,7 +89,11 @@ package dao;
 				String query = "delete from menu where maKhachHang = ?"; /*and tenKhachHang = ?";*/
 				dbStatement = c.prepareStatement(query);
 				dbStatement.setInt(1, kh.getMaKhachHang());
-				/*dbStatement.setInt(2, ctdh.getMaSanPham());*/
+				dbStatement.setString(2, kh.getTenKhachHang());
+				dbStatement.setDate(3, (Date) kh.getNgaySinh());
+				dbStatement.setString(4, kh.getDiaChi());
+				dbStatement.setString(5, kh.getSoDienThoai());
+				dbStatement.setString(6, kh.getEmail());
 				
 				soDongThayDoi = dbStatement.executeUpdate();
 				DBConnection.closeConnection(c);
