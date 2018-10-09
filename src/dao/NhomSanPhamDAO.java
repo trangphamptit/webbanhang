@@ -35,8 +35,7 @@ public class NhomSanPhamDAO {
 		}
 		return list;
 	}
-	
-	
+		
 	public static boolean insertNhomSanPham(NhomSanPham sp) {
 		try {
 			Connection conn = KetNoi.getConnection();
