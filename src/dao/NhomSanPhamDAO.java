@@ -37,13 +37,9 @@ public class NhomSanPhamDAO {
 	}
 	
 	
-	public static Connection createConnection(){
-		return (Connection) DBConnection.getConnection();
-	}
-	
 	public static boolean insertNhomSanPham(NhomSanPham sp) {
 		try {
-			Connection conn = createConnection();
+			Connection conn = KetNoi.getConnection();
 			String sql = "insert into nhomsanpham value (?, ?, ?, ?)";
 			PreparedStatement ps = conn.prepareCall(sql);
 			ps.setInt(1, sp.getMaNhom());
@@ -57,7 +53,7 @@ public class NhomSanPhamDAO {
 	}
         public static boolean updateNhomSanPham(NhomSanPham sp){
             try{
-                Connection conn = createConnection();
+                Connection conn = KetNoi.getConnection();
                 String sql = "update nhomsanpham set tenNhom = ?, hinhAnh = ?, trangThai = ? where maNhom = ?";
                 PreparedStatement ps = conn.prepareCall(sql);
                 ps.setString(1, sp.getTenNhom());
@@ -72,7 +68,7 @@ public class NhomSanPhamDAO {
         }
         public static boolean deleteNhomSanPham(int maNhom){
             try{
-                Connection conn = createConnection();
+                Connection conn = KetNoi.getConnection();
                 String sql = "delete from nhomsanpham where maNhom = ?";
                 PreparedStatement ps = conn.prepareCall(sql);
                 ps.setInt(1, maNhom);
@@ -88,7 +84,7 @@ public class NhomSanPhamDAO {
 //            }
             //NhomSanPhamDAO.insertNhomSanPham(new NhomSanPham(17, "Dam", "women.html", 1));
             //NhomSanPhamDAO.updateNhomSanPham(new NhomSanPham(17, "Đầm", "#", 0));
-            NhomSanPhamDAO.deleteNhomSanPham(17);
+            //NhomSanPhamDAO.deleteNhomSanPham(17);
         }
 	
 }
