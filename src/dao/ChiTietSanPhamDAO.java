@@ -76,9 +76,10 @@ public class ChiTietSanPhamDAO {
         return sanPham;
     }
 	
+	
 	public static void main(String[] args) {
 		try {
-			ArrayList< ChiTietSanPham> sanPham= getChiTietSanPhamTheoNhom(1);
+			ArrayList< ChiTietSanPham> sanPham= getCardsData(2);
 			for (ChiTietSanPham sp : sanPham) {
 				System.out.println(sp.toString());
 			}
