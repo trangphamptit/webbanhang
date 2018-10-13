@@ -30,7 +30,7 @@ public class CardServlet extends HttpServlet {
 				"					class=\"card-img-top\">\r\n" + 
 				"				<div class=\"men-cart-pro\">\r\n" + 
 				"					<div class=\"inner-men-cart-pro\">\r\n" + 
-				"						<a href=" + ctsp.getMaSanPham() + "\r\n" + 
+				"						<a href=Detail?id=" + ctsp.getMaSanPham() + "\r\n" + 
 				"							class=\"link-product-add-cart\">Quick View</a>\r\n" + 
 				"					</div>\r\n" + 
 				"				</div>\r\n" + 
