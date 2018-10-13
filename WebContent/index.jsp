@@ -1,6 +1,8 @@
 <%@page import="model.ChiTietSanPham"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="dao.ChiTietSanPhamDAO"%>
+<%@page import="dao.MenuDao"%>
+<%@page import="model.Menu"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -159,7 +161,7 @@
 			<div class="hovereffect">
 				<img class="img-fluid" src="images/a1.jpg" alt="">
 				<div class="overlay">
-					<h5>women's fashion</h5>
+					<h5>Áo Quần Nam</h5>
 					<a class="info" href="women.html">Shop Now</a>
 				</div>
 			</div>
@@ -168,7 +170,7 @@
 			<div class="hovereffect">
 				<img class="img-fluid" src="images/a2.jpg" alt="">
 				<div class="overlay">
-					<h5>men's fashion</h5>
+					<h5>Áo Quần Nữ</h5>
 					<a class="info" href="men.html">Shop Now</a>
 				</div>
 			</div>
@@ -187,10 +189,9 @@
 					role="tablist">
 					<li class="nav-item"><a class="nav-link active" href="#women"
 						id="women-tab" role="tab" data-toggle="tab" aria-controls="women"
-						aria-expanded="true">Women's Fashion</a></li>
+						aria-expanded="true">Áo Quần Nữ</a></li>
 					<li class="nav-item"><a class="nav-link" href="#men"
-						role="tab" id="men-tab" data-toggle="tab" aria-controls="men">Men's
-							Fashion </a></li>
+						role="tab" id="men-tab" data-toggle="tab" aria-controls="men">Áo Quần Nam </a></li>
 				</ul>
 			</nav>
 			<!-- Content Panel -->
@@ -251,44 +252,7 @@
 						<%
 							}
 						%>
-						<!-- 						<div class="item"> -->
-						<!-- 							card -->
-						<!-- 							<div class="card product-men p-3"> -->
-						<!-- 								<div class="men-thumb-item"> -->
-						<!-- 									<img src="images/pf2.jpg" alt="img" class="card-img-top"> -->
-						<!-- 									<div class="men-cart-pro"> -->
-						<!-- 										<div class="inner-men-cart-pro"> -->
-						<!-- 											<a href="womens.html" class="link-product-add-cart">Quick -->
-						<!-- 												View</a> -->
-						<!-- 										</div> -->
-						<!-- 									</div> -->
-						<!-- 								</div> -->
-						<!-- 								card body -->
-						<!-- 								<div class="card-body  py-3 px-2"> -->
-						<!-- 									<h5 class="card-title text-capitalize">Embroidered Women's -->
-						<!-- 										Tunic</h5> -->
-						<!-- 									<div class="card-text d-flex justify-content-between"> -->
-						<!-- 										<p class="text-dark font-weight-bold">$24.99</p> -->
-						<!-- 										<p class="line-through">$29.99</p> -->
-						<!-- 									</div> -->
-						<!-- 								</div> -->
-						<!-- 								card footer -->
-						<!-- 								<div class="card-footer d-flex justify-content-end"> -->
-						<!-- 									<form action="#" method="post"> -->
-						<!-- 										<input type="hidden" name="cmd" value="_cart"> <input -->
-						<!-- 											type="hidden" name="add" value="1"> <input -->
-						<!-- 											type="hidden" name="hub_item" -->
-						<!-- 											value="Embroidered Women's Tunic"> <input -->
-						<!-- 											type="hidden" name="amount" value="24.99"> -->
-						<!-- 										<button type="submit" class="hub-cart phub-cart btn"> -->
-						<!-- 											<i class="fa fa-cart-plus" aria-hidden="true"></i> -->
-						<!-- 										</button> -->
-						<!-- 										<a href="#" data-toggle="modal" data-target="#myModal1"></a> -->
-						<!-- 									</form> -->
-						<!-- 								</div> -->
-						<!-- 							</div> -->
-						<!-- 							//card -->
-						<!-- 						</div> -->
+					
 
 						<div class="item">
 							<div class="product-men p-3 text-center">
