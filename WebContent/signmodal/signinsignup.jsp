@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 </head>
 <body>
 	<div class="modal fade" id="myModal_btn" tabindex="-1" role="dialog"
@@ -11,10 +11,10 @@
 		<div class="agilemodal-dialog modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Register Now</h5>
+					<h5 class="modal-title">Đăng kí</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
-						<span aria-hidden="true">�</span>
+						<span aria-hidden="true">×</span>
 					</button>
 				</div>
 				<div class="modal-body pt-3 pb-5 px-sm-5">
@@ -35,21 +35,21 @@
 										name="Email" id="recipient-email" required="">
 								</div>
 								<div class="form-group">
-									<label for="password1" class="col-form-label">Password</label>
+									<label for="password1" class="col-form-label">Mật khẩu</label>
 									<input type="password" class="form-control" placeholder=" "
 										name="Password" id="password1" required="">
 								</div>
 								<div class="form-group">
-									<label for="password2" class="col-form-label">Confirm
-										Password</label> <input type="password" class="form-control"
+									<label for="password2" class="col-form-label">Xác nhận mật khẩu</label> 
+									<input type="password" class="form-control"
 										placeholder=" " name="Confirm Password" id="password2"
 										required="">
 								</div>
 								<div class="sub-w3l">
 									<div class="sub-agile">
-										<input type="checkbox" id="brand2" value=""> <label
-											for="brand2" class="mb-3"> <span></span>I Accept to
-											the Terms & Conditions
+										<input type="checkbox" id="brand2" value="" required> <label
+											for="brand2" class="mb-3"> <span></span>Tôi đồng ý với các điều khoản 
+											và điều kiện
 										</label>
 									</div>
 								</div>
@@ -58,9 +58,9 @@
 								</div>
 							</form>
 							<p class="text-center mt-3">
-								Already a member? <a href="#" data-toggle="modal"
+								Đã là thành viên? <a href="#" data-toggle="modal"
 									data-target="#exampleModal1" class="text-dark login_btn">
-									Login Now</a>
+									Đăng nhập</a>
 							</p>
 						</div>
 					</div>
@@ -75,10 +75,10 @@
 		<div class="agilemodal-dialog modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Login</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
-						<span aria-hidden="true">�</span>
+						<span aria-hidden="true">×</span>
 					</button>
 				</div>
 				<div class="modal-body  pt-3 pb-5 px-sm-5">
@@ -89,12 +89,12 @@
 						<div class="col-md-6">
 							<form action="#" method="post">
 								<div class="form-group">
-									<label for="recipient-name" class="col-form-label">Your
-										Name</label> <input type="text" class="form-control" placeholder=" "
+									<label for="recipient-name" class="col-form-label">Tên tài khoản</label> 
+									<input type="text" class="form-control" placeholder=" "
 										name="Name" id="recipient-name" required="">
 								</div>
 								<div class="form-group">
-									<label class="col-form-label">Password</label> <input
+									<label class="col-form-label">Mật khẩu</label> <input
 										type="password" class="form-control" placeholder=" "
 										name="Password" required="">
 								</div>
