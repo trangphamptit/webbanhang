@@ -254,7 +254,6 @@
 				<div class="col-lg-9 mt-lg-0 mt-5 right-product-grid">
 					<!-- card group  -->
 					
-					<%!ArrayList <NhomSanPham> nhomSP = NhomSanPhamDAO.layNhomSanPham();%>
 					<div class="card-group">
 					
 

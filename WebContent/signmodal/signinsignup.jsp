@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
       $(document).ready(function () {
@@ -31,7 +31,7 @@
 		<div class="agilemodal-dialog modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Tạo tài khoản</h5>
+					<h5 class="modal-title">Đăng kí</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">×</span>
@@ -60,8 +60,8 @@
 										name="Password" id="password1" required="">
 								</div>
 								<div class="form-group">
-									<label for="password2" class="col-form-label">Xác nhận mật khẩu*
-										</label> <input type="password" class="form-control"
+									<label for="password2" class="col-form-label">Xác nhận mật khẩu*</label> 
+									<input type="password" class="form-control"
 										placeholder=" " name="Confirm Password" id="password2"
 										required="">
 								</div>
