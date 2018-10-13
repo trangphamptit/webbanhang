@@ -1,3 +1,4 @@
+<%@page import="model.ChiTietSanPham"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
@@ -95,9 +96,10 @@
 						</thead>
 						<tbody>
 							<tr class="rem1">
+							<%ChiTietSanPham sanPham = (ChiTietSanPham)request.getAttribute("sanPham"); %>
 								<td class="invert">1</td>
 								<td class="invert-image"><a href="single_product.html">
-										<img src="images/pm1.jpg" alt=" " class="img-responsive">
+										<img src=<%=sanPham.getHinhAnh() %> alt=" " class="img-responsive">
 								</a></td>
 								<td class="invert">
 									<div class="quantity">
@@ -110,9 +112,9 @@
 										</div>
 									</div>
 								</td>
-								<td class="invert">Solid Men's Black Shirt</td>
+								<td class="invert"><%=sanPham.getTenSanPham() %></td>
 
-								<td class="invert">$20.00</td>
+								<td class="invert"><%=sanPham.getGiaGiam() %></td>
 								<td class="invert">
 									<div class="rem">
 										<div class="close1"></div>
