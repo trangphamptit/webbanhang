@@ -210,13 +210,7 @@
 					<div id="owl-demo" class="owl-carousel text-center inside-data0">
 						<script type="text/javascript">hello(0, 8);</script>
 
-						<div class="item">
-							<div class="product-men p-3 text-center">
-								<img src="images/p2.png" class="img-responsive" alt="" /> <a
-									href="women.html" class="btn btn-lg bg-info text-white">view
-									more</a>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 
