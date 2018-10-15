@@ -28,14 +28,16 @@
 				<%
 					for (int j = 0; j < menuCha.size(); j++) {
 				%>
-					<li class="nav-item dropdown has-mega-menu"
+				<li class="nav-item dropdown has-mega-menu"
 					style="position: static;"><a class="nav-link dropdown-toggle"
 					data-toggle="dropdown" href=<%=menuCha.get(j).getLink()%>
 					role="button" aria-haspopup="true" aria-expanded="false"><%=menuCha.get(j).getTenMenu()%></a>
 					<div class="dropdown-menu" style="width: 100%">
 						<div class="px-0 container">
 							<div id="2" class="row">
-								<%ArrayList<Menu> menuConCon = MenuDao.getMenuCon(menuCha.get(j).getMaMenu());%>
+								<%
+									ArrayList<Menu> menuConCon = MenuDao.getMenuCon(menuCha.get(j).getMaMenu());
+								%>
 								<%
 									for (int i = 0; i < menuConCon.size(); i++) {
 								%>
@@ -46,8 +48,7 @@
 									<%
 										}
 									%>
-									<a class="dropdown-item"
-										href=<%=menuConCon.get(i).getLink()%>><%=menuConCon.get(i).getTenMenu()%></a>
+									<a class="dropdown-item" href=<%=menuConCon.get(i).getLink()%>><%=menuConCon.get(i).getTenMenu()%></a>
 									<%
 										if (i % 3 == 2) {
 									%>
@@ -58,11 +59,7 @@
 								<%
 									}
 								%>
-								<!-- 								<div class="col-md-4"> -->
-								<!-- 									<a class="dropdown-item" href="men.html">T-Shirts</a>  -->
-								<!-- 									<a class="dropdown-item" href="men.html">Coats</a>  -->
-								<!-- 									<a class="dropdown-item" href="men.html">Shirts</a> -->
-								<!-- 								</div> -->
+
 							</div>
 						</div>
 					</div></li>
@@ -72,11 +69,11 @@
 
 
 
-				
 
-				<li class="nav-item"><a class="nav-link" href="about.html">About</a>
+
+				<li class="nav-item"><a class="nav-link" href="about.jsp">About</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a>
+				<li class="nav-item"><a class="nav-link" href="contact.jsp">Contact</a>
 				</li>
 			</ul>
 		</div>

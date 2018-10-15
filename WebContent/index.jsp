@@ -97,7 +97,7 @@
 									</div>
 								</div>
 								<p class="text-uppercase py-2">on special sale</p>
-								<a class="btn btn-primary mt-3 text-capitalize" href="shop.html"
+								<a class="btn btn-primary mt-3 text-capitalize" href="shop.jsp"
 									role="button">shop now</a>
 							</div>
 						</div>
@@ -130,7 +130,7 @@
 									</div>
 								</div>
 								<p class="text-uppercase py-2">on special sale</p>
-								<a class="btn btn-primary mt-3 text-capitalize" href="shop.html"
+								<a class="btn btn-primary mt-3 text-capitalize" href="shop.jsp"
 									role="button">shop now</a>
 							</div>
 						</div>
@@ -171,7 +171,7 @@
 				<img class="img-fluid" src="images/a1.jpg" alt="">
 				<div class="overlay">
 					<h5>Áo Quần Nam</h5>
-					<a class="info" href="women.html">Shop Now</a>
+					<a class="info" href="women.jsp">Shop Now</a>
 				</div>
 			</div>
 		</div>
@@ -180,7 +180,7 @@
 				<img class="img-fluid" src="images/a2.jpg" alt="">
 				<div class="overlay">
 					<h5>Áo Quần Nữ</h5>
-					<a class="info" href="men.html">Shop Now</a>
+					<a class="info" href="men.jsp">Shop Now</a>
 				</div>
 			</div>
 		</div>
