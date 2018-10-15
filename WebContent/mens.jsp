@@ -82,21 +82,21 @@
 						<div class="flexslider1">
 						<%ChiTietSanPham sanPham = (ChiTietSanPham) request.getAttribute("sanPham");%>
 							<ul class="slides">
-								<li data-thumb="images/ms1.jpg">
+								<li data-thumb=<%= sanPham.getHinhAnh()%>>
 									<div class="thumb-image">
-										<img src="images/ms1.jpg" data-imagezoom="true" alt=" "
+										<img src=<%= sanPham.getHinhAnh()%> data-imagezoom="true" alt=" "
 											class="img-fluid">
 									</div>
 								</li>
-								<li data-thumb="images/ms2.jpg">
+								<li data-thumb=<%= sanPham.getHinhAnh()%>>
 									<div class="thumb-image">
-										<img src="images/ms2.jpg" data-imagezoom="true" alt=" "
+										<img src=<%= sanPham.getHinhAnh()%> data-imagezoom="true" alt=" "
 											class="img-fluid">
 									</div>
 								</li>
-								<li data-thumb="images/ms3.jpg">
+								<li data-thumb=<%= sanPham.getHinhAnh()%>>
 									<div class="thumb-image">
-										<img src="images/ms3.jpg" data-imagezoom="true" alt=" "
+										<img src=<%= sanPham.getHinhAnh()%> data-imagezoom="true" alt=" "
 											class="img-fluid">
 									</div>
 								</li>
@@ -168,8 +168,8 @@
 							<form action="#" method="post">
 								<input type="hidden" name="cmd" value="_cart"> <input
 									type="hidden" name="add" value="1"> <input
-									type="hidden" name="hub_item" value=" Formal Men's Blazer">
-								<input type="hidden" name="amount" value="15.99">
+									type="hidden" name="hub_item" value="<%= sanPham.getTenSanPham() %>">
+								<input type="hidden" name="amount" value=<%= sanPham.getGiaGiam() %>>
 								<button type="submit" class="hub-cart phub-cart btn">
 									<i class="fa fa-cart-plus" aria-hidden="true"></i>
 								</button>

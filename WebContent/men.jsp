@@ -1,3 +1,5 @@
+<%@page import="model.NhomSanPham"%>
+<%@page import="dao.NhomSanPhamDAO"%>
 <%@page import="model.ChiTietSanPham"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="dao.ChiTietSanPhamDAO"%>
@@ -21,6 +23,9 @@
 		window.scrollTo(0, 1);
 	}
 </script>
+<!-- js -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<!-- //js -->
 <!-- Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet"
 	media="all">
@@ -42,6 +47,13 @@
 	href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
 	rel="stylesheet">
 <!-- //online-fonts -->
+<script type="text/javascript">
+	function hello(id, nhom) {
+		$.get("Card", {'nhom' : nhom}, function(data) {
+			$('.inside-data' + id).html(data);
+		});
+	}
+</script>
 </head>
 
 <body>
@@ -251,504 +263,28 @@
 				<!-- grid right -->
 				<div class="col-lg-9 mt-lg-0 mt-5 right-product-grid">
 					<!-- card group  -->
-					<div class="card-group">
-						<%
-							ArrayList<ChiTietSanPham> cardsData = ChiTietSanPhamDAO.getCardsData(2);
-						%>
-						<%
-							for (int i = 0; i < cardsData.size(); i++) {
-						%>
-						<div class="col-lg-3 col-sm-6 p-0">
-							<div class="card product-men p-3">
-								<div class="men-thumb-item">
-									<img src=<%=cardsData.get(i).getHinhAnh()%> alt="img"
-										class="card-img-top">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="Detail?id=<%=cardsData.get(i).getMaSanPham()%>"
-												class="link-product-add-cart">Quick View</a>
-										</div>
-									</div>
-								</div>
-								<!-- card body -->
-								<div class="card-body  py-3 px-2">
-									<h5 class="card-title text-capitalize"><%=cardsData.get(i).getTenSanPham()%></h5>
-									<div class="card-text d-flex justify-content-between">
-										<p class="text-dark font-weight-bold"><%=cardsData.get(i).getGiaGiam()%></p>
-										<p class="line-through"><%=cardsData.get(i).getGia()%></p>
-									</div>
-								</div>
-								<!-- card footer -->
-								<div class="card-footer d-flex justify-content-end">
-									<form action="#" method="post">
-										<input type="hidden" name="cmd" value="_cart"> <input
-											type="hidden" name="add" value="1"> <input
-											type="hidden" name="hub_item"
-											value=<%=cardsData.get(i).getTenSanPham()%>> <input
-											type="hidden" name="amount"
-											value=<%=cardsData.get(i).getGiaGiam()%>>
-										<button type="submit" class="hub-cart phub-cart btn">
-											<i class="fa fa-cart-plus" aria-hidden="true"></i>
-										</button>
-										<a href="#" data-toggle="modal" data-target="#myModal1"></a>
-									</form>
-								</div>
-							</div>
-						</div>
-						<%
-							}
-						%>
-						<!-- card -->
-						<!-- 						<div class="col-lg-3 col-sm-6 p-0"> -->
-						<!-- 							<div class="card product-men p-3"> -->
-						<!-- 								<div class="men-thumb-item"> -->
-						<!-- 									<img src="images/pm1.jpg" alt="img" class="card-img-top"> -->
-						<!-- 									<div class="men-cart-pro"> -->
-						<!-- 										<div class="inner-men-cart-pro"> -->
-						<!-- 											<a href="mens.html" class="link-product-add-cart">Quick -->
-						<!-- 												View</a> -->
-						<!-- 										</div> -->
-						<!-- 									</div> -->
-						<!-- 								</div> -->
-						<!-- 								card body -->
-						<!-- 								<div class="card-body  py-3 px-2"> -->
-						<!-- 									<h5 class="card-title text-capitalize">Solid Formal Black -->
-						<!-- 										Shirt</h5> -->
-						<!-- 									<div class="card-text d-flex justify-content-between"> -->
-						<!-- 										<p class="text-dark font-weight-bold">$40.00</p> -->
-						<!-- 										<p class="line-through">$50.99</p> -->
-						<!-- 									</div> -->
-						<!-- 								</div> -->
-						<!-- 								card footer -->
-						<!-- 								<div class="card-footer d-flex justify-content-end"> -->
-						<!-- 									<form action="#" method="post"> -->
-						<!-- 										<input type="hidden" name="cmd" value="_cart"> <input -->
-						<!-- 											type="hidden" name="add" value="1"> <input -->
-						<!-- 											type="hidden" name="hub_item" -->
-						<!-- 											value="Solid Formal Black Shirt"> <input -->
-						<!-- 											type="hidden" name="amount" value="40.00"> -->
-						<!-- 										<button type="submit" class="hub-cart phub-cart btn"> -->
-						<!-- 											<i class="fa fa-cart-plus" aria-hidden="true"></i> -->
-						<!-- 										</button> -->
-						<!-- 										<a href="#" data-toggle="modal" data-target="#myModal1"></a> -->
-						<!-- 									</form> -->
-						<!-- 								</div> -->
-						<!-- 							</div> -->
-						<!-- 						</div> -->
-						<!-- //card -->
-						<!-- card -->
-
-
-
-						<!-- //row  -->
+					<div class="card-group inside-data0">
+						<script type="text/javascript">hello(0, 1);</script>
 					</div>
 					<!-- //card group 1-->
 					<!-- card group 2 -->
-					<div class="card-group my-5">
-						<!-- card -->
-						<%
-							ArrayList<ChiTietSanPham> cartItems = ChiTietSanPhamDAO.getCardsData(5);
-						%>
-						<%
-							for (int i = 0; i < cartItems.size(); i++) {
-						%>
-						<div class="col-lg-3 col-sm-6 p-0">
-							<div class="card product-men p-3">
-								<div class="men-thumb-item">
-									<img src=<%=cartItems.get(i).getHinhAnh()%> alt="img"
-										class="card-img-top">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-								</div>
-								<!-- card body -->
-								<div class="card-body  py-3 px-2">
-									<h5 class="card-title text-capitalize"><%=cartItems.get(i).getTenSanPham()%></h5>
-									<div class="card-text d-flex justify-content-between">
-										<p class="text-dark font-weight-bold"><%=cartItems.get(i).getGiaGiam()%></p>
-										<p class="line-through"><%=cartItems.get(i).getGia()%></p>
-									</div>
-								</div>
-								<!-- card footer -->
-								<div class="card-footer d-flex justify-content-end">
-									<form action="#" method="post">
-										<input type="hidden" name="cmd" value="_cart"> <input
-											type="hidden" name="add" value="1"> <input
-											type="hidden" name="hub_item"
-											value=<%=cartItems.get(i).getTenSanPham()%>> <input
-											type="hidden" name="amount" value="20.00">
-										<button type="submit" class="hub-cart phub-cart btn">
-											<i class="fa fa-cart-plus" aria-hidden="true"></i>
-										</button>
-										<a href="#" data-toggle="modal" data-target="#myModal1"></a>
-									</form>
-								</div>
-							</div>
-						</div>
-						<!-- //card -->
-						<!-- card -->
-						<!-- 							<div class="col-lg-3 col-sm-6 p-0"> -->
-						<!-- 								<div class="card product-men p-3"> -->
-						<!-- 									<div class="men-thumb-item"> -->
-						<!-- 										<img src="images/pm12.jpg" alt="img" class="card-img-top"> -->
-						<!-- 										<div class="men-cart-pro"> -->
-						<!-- 											<div class="inner-men-cart-pro"> -->
-						<!-- 												<a href="mens.html" class="link-product-add-cart">Quick -->
-						<!-- 													View</a> -->
-						<!-- 											</div> -->
-						<!-- 										</div> -->
-						<!-- 									</div> -->
-						<!-- 									card body -->
-						<!-- 									<div class="card-body  py-3 px-2"> -->
-						<!-- 										<h5 class="card-title text-capitalize">Blue Wedding -->
-						<!-- 											Formal Blazer</h5> -->
-						<!-- 										<div class="card-text d-flex justify-content-between"> -->
-						<!-- 											<p class="text-dark font-weight-bold">$35.00</p> -->
-						<!-- 											<p class="line-through">$44.99</p> -->
-						<!-- 										</div> -->
-						<!-- 									</div> -->
-						<!-- 									card footer -->
-						<!-- 									<div class="card-footer d-flex justify-content-end"> -->
-						<!-- 										<form action="#" method="post"> -->
-						<!-- 											<input type="hidden" name="cmd" value="_cart"> <input -->
-						<!-- 												type="hidden" name="add" value="1"> <input -->
-						<!-- 												type="hidden" name="hub_item" -->
-						<!-- 												value="Blue Wedding Formal Blazer"> <input -->
-						<!-- 												type="hidden" name="amount" value="35.00"> -->
-						<!-- 											<button type="submit" class="hub-cart phub-cart btn"> -->
-						<!-- 												<i class="fa fa-cart-plus" aria-hidden="true"></i> -->
-						<!-- 											</button> -->
-						<!-- 											<a href="#" data-toggle="modal" data-target="#myModal1"></a> -->
-						<!-- 										</form> -->
-						<!-- 									</div> -->
-						<!-- 								</div> -->
-						<!-- 							</div> -->
-						<!-- //card -->
-						<!-- card -->
-
-						<%
-							}
-						%>
+					<div class="card-group my-5 inside-data1">
+						<script type="text/javascript">hello(1, 2);</script>
 					</div>
 					<!-- //card group -->
 					<!-- card group  -->
-					<div class="card-group">
-						<div class="col-lg-3 col-sm-6 p-0">
-							<!-- card -->
-							<div class="card product-men p-3">
-								<div class="men-thumb-item">
-									<img src="images/pt1.jpg" alt="img" class="card-img-top">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-								</div>
-								<!-- card body -->
-								<div class="card-body  py-3 px-2">
-									<h5 class="card-title text-capitalize">Slim Fit Men's
-										Black Trousers</h5>
-									<div class="card-text d-flex justify-content-between">
-										<p class="text-dark font-weight-bold">$14.99</p>
-										<p class="line-through">$18.99</p>
-									</div>
-								</div>
-								<!-- card footer -->
-								<div class="card-footer d-flex justify-content-end">
-									<form action="#" method="post">
-										<input type="hidden" name="cmd" value="_cart"> <input
-											type="hidden" name="add" value="1"> <input
-											type="hidden" name="hub_item"
-											value="Slim Fit Men's Black Trousers"> <input
-											type="hidden" name="amount" value="14h2.agile_btxt.99">
-										<button type="submit" class="hub-cart phub-cart btn">
-											<i class="fa fa-cart-plus" aria-hidden="true"></i>
-										</button>
-										<a href="#" data-toggle="modal" data-target="#myModal1"></a>
-									</form>
-								</div>
-							</div>
-						</div>
-						<!-- //card -->
-						<!-- card -->
-						<div class="col-lg-3 col-sm-6 p-0">
-							<div class="card product-men p-3">
-								<div class="men-thumb-item">
-									<img src="images/pt2.jpg" alt="img" class="card-img-top">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-								</div>
-								<!-- card body -->
-								<div class="card-body  py-3 px-2">
-									<h5 class="card-title text-capitalize">Slim Fit Men's
-										Denim Jeans</h5>
-									<div class="card-text d-flex justify-content-between">
-										<p class="text-dark font-weight-bold">$24.99</p>
-										<p class="line-through">$35.99</p>
-									</div>
-								</div>
-								<!-- card footer -->
-								<div class="card-footer d-flex justify-content-end">
-									<form action="#" method="post">
-										<input type="hidden" name="cmd" value="_cart"> <input
-											type="hidden" name="add" value="1"> <input
-											type="hidden" name="hub_item"
-											value="Slim Fit Men's Denim Jeans"> <input
-											type="hidden" name="amount" value="24.99">
-										<button type="submit" class="hub-cart phub-cart btn">
-											<i class="fa fa-cart-plus" aria-hidden="true"></i>
-										</button>
-										<a href="#" data-toggle="modal" data-target="#myModal1"></a>
-									</form>
-								</div>
-							</div>
-						</div>
-						<!-- //card -->
-						<!-- card -->
-						<div class="col-lg-3 col-sm-6 p-0">
-							<div class="card product-men p-3">
-								<div class="men-thumb-item">
-									<img src="images/pt3.jpg" alt="img" class="card-img-top">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-								</div>
-								<!-- card body -->
-								<div class="card-body  py-3 px-2">
-									<h5 class="card-title text-capitalize">Slim Fit Men's Gold
-										Trousers</h5>
-									<div class="card-text d-flex justify-content-between">
-										<p class="text-dark font-weight-bold">$14.99</p>
-										<p class="line-through">$18.99</p>
-									</div>
-								</div>
-								<!-- card footer -->
-								<div class="card-footer d-flex justify-content-end">
-									<form action="#" method="post">
-										<input type="hidden" name="cmd" value="_cart"> <input
-											type="hidden" name="add" value="1"> <input
-											type="hidden" name="hub_item"
-											value="Slim Fit Men's Gold Trousers"> <input
-											type="hidden" name="amount" value="14.99">
-										<button type="submit" class="hub-cart phub-cart btn">
-											<i class="fa fa-cart-plus" aria-hidden="true"></i>
-										</button>
-										<a href="#" data-toggle="modal" data-target="#myModal1"></a>
-									</form>
-								</div>
-							</div>
-						</div>
-						<!-- //card -->
-						<!-- card -->
-						<div class="col-lg-3 col-sm-6 p-0">
-							<div class="card product-men p-3">
-								<div class="men-thumb-item">
-									<img src="images/pt4.jpg" alt="img" class="card-img-top">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-								</div>
-								<!-- card body -->
-								<div class="card-body  py-3 px-2">
-									<h5 class="card-title text-capitalize">Slim Fit Men's Blue
-										Trousers</h5>
-									<div class="card-text d-flex justify-content-between">
-										<p class="text-dark font-weight-bold">$16.99</p>
-										<p class="line-through">$25.99</p>
-									</div>
-								</div>
-								<!-- card footer -->
-								<div class="card-footer d-flex justify-content-end">
-									<form action="#" method="post">
-										<input type="hidden" name="cmd" value="_cart"> <input
-											type="hidden" name="add" value="1"> <input
-											type="hidden" name="hub_item"
-											value="Slim Fit Men's Blue Trousers"> <input
-											type="hidden" name="amount" value="16.99">
-										<button type="submit" class="hub-cart phub-cart btn">
-											<i class="fa fa-cart-plus" aria-hidden="true"></i>
-										</button>
-										<a href="#" data-toggle="modal" data-target="#myModal1"></a>
-									</form>
-								</div>
-							</div>
-						</div>
-						<!-- //card -->
-						<!-- //row  -->
+					<div class="card-group inside-data2">
+						<script type="text/javascript">hello(2, 3);</script>
 					</div>
 					<!-- //card group -->
 					<!-- card group  -->
-					<div class="card-group mt-5">
-						<!-- row1-->
-						<!-- card -->
-						<div class="col-lg-3 col-sm-6 p-0">
-							<div class="card product-men p-3">
-								<div class="men-thumb-item">
-									<img src="images/pt5.jpg" alt="img" class="card-img-top">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-								</div>
-								<!-- card body -->
-								<div class="card-body  py-3 px-2">
-									<h5 class="card-title text-capitalize">Slim Fit Men Black
-										Jeans</h5>
-									<div class="card-text d-flex justify-content-between">
-										<p class="text-dark font-weight-bold">$21.99</p>
-										<p class="line-through">$25.99</p>
-									</div>
-								</div>
-								<!-- card footer -->
-								<div class="card-footer d-flex justify-content-end">
-									<form action="#" method="post">
-										<input type="hidden" name="cmd" value="_cart"> <input
-											type="hidden" name="add" value="1"> <input
-											type="hidden" name="hub_item"
-											value="Slim Fit Men Black Jeans"> <input
-											type="hidden" name="amount" value="21.99">
-										<button type="submit" class="hub-cart phub-cart btn">
-											<i class="fa fa-cart-plus" aria-hidden="true"></i>
-										</button>
-										<a href="#" data-toggle="modal" data-target="#myModal1"></a>
-									</form>
-								</div>
-							</div>
-						</div>
-						<!-- //card -->
-						<!-- card -->
-						<div class="col-lg-3 col-sm-6 p-0">
-							<div class="card product-men p-3">
-								<div class="men-thumb-item">
-									<img src="images/pt6.jpg" alt="img" class="card-img-top">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-								</div>
-								<!-- card body -->
-								<div class="card-body  py-3 px-2">
-									<h5 class="card-title text-capitalize">Slim Fit Men Black
-										Jeans</h5>
-									<div class="card-text d-flex justify-content-between">
-										<p class="text-dark font-weight-bold">$19.99</p>
-										<p class="line-through">$24.99</p>
-									</div>
-								</div>
-								<!-- card footer -->
-								<div class="card-footer d-flex justify-content-end">
-									<form action="#" method="post">
-										<input type="hidden" name="cmd" value="_cart"> <input
-											type="hidden" name="add" value="1"> <input
-											type="hidden" name="hub_item"
-											value="Slim Fit Men Black Jeans"> <input
-											type="hidden" name="amount" value="19.99">
-										<button type="submit" class="hub-cart phub-cart btn">
-											<i class="fa fa-cart-plus" aria-hidden="true"></i>
-										</button>
-										<a href="#" data-toggle="modal" data-target="#myModal1"></a>
-									</form>
-								</div>
-							</div>
-						</div>
-						<!-- //card -->
-						<!-- card -->
-						<div class="col-lg-3 col-sm-6 p-0">
-							<div class="card product-men p-3">
-								<div class="men-thumb-item">
-									<img src="images/pt7.jpg" alt="img" class="card-img-top">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-								</div>
-								<!-- card body -->
-								<div class="card-body  py-3 px-2">
-									<h5 class="card-title text-capitalize">Slim Fit Men's Blue
-										Trousers</h5>
-									<div class="card-text d-flex justify-content-between">
-										<p class="text-dark font-weight-bold">$16.99</p>
-										<p class="line-through">$20.99</p>
-									</div>
-								</div>
-								<!-- card footer -->
-								<div class="card-footer d-flex justify-content-end">
-									<form action="#" method="post">
-										<input type="hidden" name="cmd" value="_cart"> <input
-											type="hidden" name="add" value="1"> <input
-											type="hidden" name="hub_item"
-											value="Slim Fit Men's Blue Trousers"> <input
-											type="hidden" name="amount" value="16.99">
-										<button type="submit" class="hub-cart phub-cart btn">
-											<i class="fa fa-cart-plus" aria-hidden="true"></i>
-										</button>
-										<a href="#" data-toggle="modal" data-target="#myModal1"></a>
-									</form>
-								</div>
-							</div>
-						</div>
-						<!-- //card -->
-						<!-- card -->
-						<div class="col-lg-3 col-sm-6 p-0">
-							<div class="card product-men p-3">
-								<div class="men-thumb-item">
-									<img src="images/pt8.jpg" alt="img" class="card-img-top">
-									<div class="men-cart-pro">
-										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
-												View</a>
-										</div>
-									</div>
-								</div>
-								<!-- card body -->
-								<div class="card-body  py-3 px-2">
-									<h5 class="card-title text-capitalize">Slim Men's Dark
-										Blue Jeans</h5>
-									<div class="card-text d-flex justify-content-between">
-										<p class="text-dark font-weight-bold">$17.99</p>
-										<p class="line-through">$24.99</p>
-									</div>
-								</div>
-								<!-- card footer -->
-								<div class="card-footer d-flex justify-content-end">
-									<form action="#" method="post">
-										<input type="hidden" name="cmd" value="_cart"> <input
-											type="hidden" name="add" value="1"> <input
-											type="hidden" name="hub_item"
-											value="Slim Men's Dark Blue Jeans"> <input
-											type="hidden" name="amount" value="17.99">
-										<button type="submit" class="hub-cart phub-cart btn">
-											<i class="fa fa-cart-plus" aria-hidden="true"></i>
-										</button>
-										<a href="#" data-toggle="modal" data-target="#myModal1"></a>
-									</form>
-								</div>
-							</div>
-						</div>
-						<!-- //card -->
-						<!-- //row  -->
+					<div class="card-group mt-5 inside-data3">
+					<script type="text/javascript">hello(3, 4);</script>
 					</div>
 					<!-- //card group -->
+					<div class="card-group mt-5 inside-data4">
+						<script type="text/javascript">hello(4, 5);</script>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -761,9 +297,6 @@
 	<!-- sign up Modal -->
 	<jsp:include page="signmodal/signinsignup.jsp"></jsp:include>
 	<!-- signin Modal -->
-	<!-- js -->
-	<script src="js/jquery-2.2.3.min.js"></script>
-	<!-- //js -->
 	<!-- smooth dropdown -->
 	<script>
 		$(document).ready(

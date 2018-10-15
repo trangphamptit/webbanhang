@@ -1,5 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@page import="dao.MenuDao"%>
+<%@page import="model.Menu"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,25 +20,30 @@
 			<form class="nav-search form-inline my-0 form-control" action="#"
 				method="post">
 				<select class="form-control input-lg" name="category">
-					<option value="all">Search our store</option>
-					<optgroup label="Mens">
-						<option value="T-Shirts">T-Shirts</option>
-						<option value="coats-jackets">Coats & Jackets</option>
-						<option value="Shirts">Shirts</option>
-						<option value="Suits & Blazers">Suits & Blazers</option>
-						<option value="Jackets">Jackets</option>
-						<option value="Sweat Shirts">Trousers</option>
-						
+					<option value="all">Tìm kiếm</option>
+					<%!ArrayList<Menu> menuCha = MenuDao.getMenuCha();%>
+					<%
+						for (int i = 0; i < menuCha.size(); i++) {
+					%>
+					<optgroup label="<%=menuCha.get(i).getTenMenu()%>">
+						<%
+							ArrayList<Menu> menuCon = MenuDao.getMenuCon(menuCha.get(i).getMaMenu());
+						%>
+						<%
+							for (int j = 0; j < menuCon.size(); j++) {
+						%>
+
+						<option value=<%=menuCon.get(j).getLink()%>><%=menuCon.get(j).getTenMenu()%></option>
+
+						<%
+							}
+						%>
 					</optgroup>
-					<optgroup label="Womens">
-						<option value="Dresses">Dresses</option>
-						<option value="T-shirts">T-shirts</option>
-						<option value="skirts">Skirts</option>
-						<option value="jeans">Jeans</option>
-						<option value="Tunics">Tunics</option>
-					</optgroup>
+					<%
+						}
+					%>
 				</select> <input class="btn btn-outline-secondary  ml-3 my-sm-0"
-					type="submit" value="Search">
+					type="submit" value="Tìm kiếm">
 			</form>
 			<!-- search form -->
 			<div class="nav-icon d-flex">

@@ -1,6 +1,8 @@
 <%@page import="model.ChiTietSanPham"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="dao.ChiTietSanPhamDAO"%>
+<%@page import="dao.MenuDao"%>
+<%@page import="model.Menu"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -168,7 +170,7 @@
 			<div class="hovereffect">
 				<img class="img-fluid" src="images/a1.jpg" alt="">
 				<div class="overlay">
-					<h5>women's fashion</h5>
+					<h5>Áo Quần Nam</h5>
 					<a class="info" href="women.html">Shop Now</a>
 				</div>
 			</div>
@@ -177,7 +179,7 @@
 			<div class="hovereffect">
 				<img class="img-fluid" src="images/a2.jpg" alt="">
 				<div class="overlay">
-					<h5>men's fashion</h5>
+					<h5>Áo Quần Nữ</h5>
 					<a class="info" href="men.html">Shop Now</a>
 				</div>
 			</div>
@@ -198,8 +200,7 @@
 						id="women-tab" role="tab" data-toggle="tab" aria-controls="women"
 						aria-expanded="true">Áo Quần Nữ</a></li>
 					<li class="nav-item"><a class="nav-link" href="#men"
-						role="tab" id="men-tab" data-toggle="tab" aria-controls="men">Áo
-							Quần Nam </a></li>
+						role="tab" id="men-tab" data-toggle="tab" aria-controls="men">Áo Quần Nam </a></li>
 				</ul>
 			</nav>
 			<!-- Content Panel -->
@@ -209,13 +210,7 @@
 					<div id="owl-demo" class="owl-carousel text-center inside-data0">
 						<script type="text/javascript">hello(0, 8);</script>
 
-						<div class="item">
-							<div class="product-men p-3 text-center">
-								<img src="images/p2.png" class="img-responsive" alt="" /> <a
-									href="women.html" class="btn btn-lg bg-info text-white">view
-									more</a>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 
