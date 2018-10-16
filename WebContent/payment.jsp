@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+	
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -67,7 +68,7 @@
 	<!-- breadcrumbs -->
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+			<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
 			<li class="breadcrumb-item active" aria-current="page">Payment</li>
 		</ol>
 	</nav>
@@ -134,7 +135,7 @@
 														<div class="fpay_card_number_grid_right">
 															<div class="controls">
 																<label class="control-label">CVV</label> <input
-																	class="security-code form-control" ·
+																	class="security-code form-control" Â·
 																	inputmode="numeric" type="text" name="security-code"
 																	placeholder="&#149;&#149;&#149;">
 															</div>
@@ -307,7 +308,7 @@
 																<div class="fpay_card_number_grid_right">
 																	<div class="controls">
 																		<label class="control-label">CVV</label> <input
-																			class="security-code form-control" ·
+																			class="security-code form-control" Â·
 																			inputmode="numeric" type="text" name="security-code"
 																			placeholder="&#149;&#149;&#149;">
 																	</div>

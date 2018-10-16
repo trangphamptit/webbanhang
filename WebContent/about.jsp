@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 
 <!DOCTYPE html>
@@ -66,7 +66,7 @@
 	<!-- breadcrumbs -->
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+			<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
 			<li class="breadcrumb-item active" aria-current="page">About</li>
 		</ol>
 	</nav>
@@ -101,7 +101,7 @@
 				<img class="img-fluid" src="images/a1.jpg" alt="">
 				<div class="overlay">
 					<h5>women's fashion</h5>
-					<a class="info" href="women.html">Shop Now</a>
+					<a class="info" href="women.jsp">Shop Now</a>
 				</div>
 			</div>
 		</div>
@@ -110,7 +110,7 @@
 				<img class="img-fluid" src="images/a2.jpg" alt="">
 				<div class="overlay">
 					<h5>men's fashion</h5>
-					<a class="info" href="men.html">Shop Now</a>
+					<a class="info" href="men.jsp">Shop Now</a>
 				</div>
 			</div>
 		</div>
@@ -147,7 +147,7 @@
 									<img src="images/pf1.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="womens.html" class="link-product-add-cart">Quick
+											<a href="womens.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -185,7 +185,7 @@
 									<img src="images/pf2.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="womens.html" class="link-product-add-cart">Quick
+											<a href="womens.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -223,7 +223,7 @@
 									<img src="images/pf3.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="womens.html" class="link-product-add-cart">Quick
+											<a href="womens.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -261,7 +261,7 @@
 									<img src="images/pf9.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="womens.html" class="link-product-add-cart">Quick
+											<a href="womens.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -299,7 +299,7 @@
 									<img src="images/pf11.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="womens.html" class="link-product-add-cart">Quick
+											<a href="womens.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -332,7 +332,7 @@
 						<div class="item">
 							<div class="product-men p-3 text-center">
 								<img src="images/p2.png" class="img-responsive" alt="" /> <a
-									href="women.html" class="btn btn-lg bg-info text-white">view
+									href="women.jsp" class="btn btn-lg bg-info text-white">view
 									more</a>
 							</div>
 						</div>
@@ -349,7 +349,7 @@
 									<img src="images/pm1.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
+											<a href="mens.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -387,7 +387,7 @@
 									<img src="images/pm2.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
+											<a href="mens.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -425,7 +425,7 @@
 									<img src="images/pm11.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
+											<a href="mens.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -463,7 +463,7 @@
 									<img src="images/pt1.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
+											<a href="mens.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -501,7 +501,7 @@
 									<img src="images/pt2.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="mens.html" class="link-product-add-cart">Quick
+											<a href="mens.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -539,7 +539,7 @@
 									<img src="images/pt3.jpg " alt="img " class="card-img-top ">
 									<div class="men-cart-pro ">
 										<div class="inner-men-cart-pro ">
-											<a href="mens.html " class="link-product-add-cart ">Quick
+											<a href="mens.jsp " class="link-product-add-cart ">Quick
 												View</a>
 										</div>
 									</div>
@@ -574,7 +574,7 @@
 
 							<div class="product-men p-3 text-center">
 								<img src="images/p2.png" class="img-responsive" alt=""> <a
-									href="men.html" class="btn btn-lg bg-info text-white">view
+									href="men.jsp" class="btn btn-lg bg-info text-white">view
 									more</a>
 							</div>
 							<!-- //card -->
@@ -592,7 +592,7 @@
 									<img src="images/pg1.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="girl.html" class="link-product-add-cart">Quick
+											<a href="girl.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -630,7 +630,7 @@
 									<img src="images/pg2.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="girl.html" class="link-product-add-cart">Quick
+											<a href="girl.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -668,7 +668,7 @@
 									<img src="images/pg3.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="girl.html" class="link-product-add-cart">Quick
+											<a href="girl.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -731,7 +731,7 @@
 									<img src="images/pg4.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="girl.html" class="link-product-add-cart">Quick
+											<a href="girl.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -768,7 +768,7 @@
 									<img src="images/pg5.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="girl.html" class="link-product-add-cart">Quick
+											<a href="girl.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -802,7 +802,7 @@
 						<div class="item">
 							<div class="product-men p-3 text-center">
 								<img src="images/p2.png" class="img-responsive" alt="" /> <a
-									href="girls.html" class="btn btn-lg bg-info text-white">view
+									href="girls.jsp" class="btn btn-lg bg-info text-white">view
 									more</a>
 							</div>
 						</div>
@@ -819,7 +819,7 @@
 									<img src="images/pb1.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="boy.html" class="link-product-add-cart">Quick
+											<a href="boy.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -857,7 +857,7 @@
 									<img src="images/pb2.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="boy.html" class="link-product-add-cart">Quick
+											<a href="boy.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -895,7 +895,7 @@
 									<img src="images/pb3.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="boy.html" class="link-product-add-cart">Quick
+											<a href="boy.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -958,7 +958,7 @@
 									<img src="images/pb4.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="boy.html" class="link-product-add-cart">Quick
+											<a href="boy.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -996,7 +996,7 @@
 									<img src="images/pb5.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="boy.html" class="link-product-add-cart">Quick
+											<a href="boy.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -1034,7 +1034,7 @@
 									<img src="images/pb6.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="boy.html" class="link-product-add-cart">Quick
+											<a href="boy.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -1072,7 +1072,7 @@
 									<img src="images/pb8.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="boy.html" class="link-product-add-cart">Quick
+											<a href="boy.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -1110,7 +1110,7 @@
 									<img src="images/pb9.jpg" alt="img" class="card-img-top">
 									<div class="men-cart-pro">
 										<div class="inner-men-cart-pro">
-											<a href="boy.html" class="link-product-add-cart">Quick
+											<a href="boy.jsp" class="link-product-add-cart">Quick
 												View</a>
 										</div>
 									</div>
@@ -1144,7 +1144,7 @@
 						<div class="item">
 							<div class="product-men p-3 text-center">
 								<img src="images/p2.png" class="img-responsive" alt="" /> <a
-									href="boys.html" class="btn btn-lg bg-info text-white">view
+									href="boys.jsp" class="btn btn-lg bg-info text-white">view
 									more</a>
 							</div>
 						</div>

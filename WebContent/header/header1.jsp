@@ -7,24 +7,40 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<script>
+function search(obj)
+{
+    var menu = document.getElementById('select');
+    var btn = document.getElementById('search');
+    var link = menuCon.get(obj).getLink();
+    var value = obj.value;
+    if (value === ''){
+        window.location="index.jsp";
+    }
+    else {
+    	window.location=link;
+    }
+}
+</script>
 </head>
 <body>
 	<nav class="top_nav d-flex pt-3 pb-1">
 		<!-- logo -->
 		<h1>
-			<a class="navbar-brand" href="index.html">T&T </a>
+			<a class="navbar-brand" href="index.jsp">T&T </a>
 		</h1>
 		<!-- //logo -->
 		<div class="w3ls_right_nav ml-auto d-flex">
 			<!-- search form -->
-			<form class="nav-search form-inline my-0 form-control" action="#"
+			<form class="nav-search form-inline my-0 form-control" id="s" 
 				method="post">
-				<select class="form-control input-lg" name="category">
-					<option value="all">Tìm kiếm</option>
+				<select class="form-control input-lg" id="mySelect" name="category">
+					<option value="index.jsp">Tìm kiếm</option>
 					<%!ArrayList<Menu> menuCha = MenuDao.getMenuCha();%>
 					<%
-						for (int i = 0; i < menuCha.size(); i++) {
+						for (int i = 1; i < menuCha.size(); i++) {
 					%>
+					<option value="shop.jsp">ALL</option>
 					<optgroup label="<%=menuCha.get(i).getTenMenu()%>">
 						<%
 							ArrayList<Menu> menuCon = MenuDao.getMenuCon(menuCha.get(i).getMaMenu());
@@ -42,8 +58,27 @@
 					<%
 						}
 					%>
-				</select> <input class="btn btn-outline-secondary  ml-3 my-sm-0"
-					type="submit" value="Tìm kiếm">
+				</select> 
+					<input class="btn btn-outline-secondary  ml-3 my-sm-0" type="button" value="Tìm kiếm" onclick="myFunction()" />
+				<script>
+				function myFunction() {
+					    var x = document.getElementById("mySelect").value;
+					    window.location.assign(x)
+					
+					
+					/*var x = document.getElementById("select").value;
+					document.getElementById("demo").innerHTML = x;*/
+				 	/*var link = obj.value;
+					window.location.assign("link");
+				
+					
+					/*
+					window.location.assign(document.forms["s"].category.value)
+				 
+				alern(document.forms["s"].category.value);*/
+				 
+				}
+		</script>
 			</form>
 			<!-- search form -->
 			<div class="nav-icon d-flex">

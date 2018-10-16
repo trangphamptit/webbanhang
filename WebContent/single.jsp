@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -62,7 +61,7 @@
 	<!-- breadcrumbs -->
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+			<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
 			<li class="breadcrumb-item active" aria-current="page">Single
 				Page</li>
 		</ol>
@@ -274,20 +273,20 @@
 							<div class="card-body">
 								<div class="row">
 									<ul class="w3-tag2">
-										<li><a href="shop.html">amet</a></li>
+										<li><a href="shop.jsp">amet</a></li>
 										<li><a href="#">placerat</a></li>
-										<li><a href="shop.html">Proin </a></li>
+										<li><a href="shop.jsp">Proin </a></li>
 										<li><a href="#">vehicula</a></li>
 										<li><a href="#">vehicula</a></li>
-										<li><a href="shop.html">diam</a></li>
-										<li><a href="shop.html">amet</a></li>
+										<li><a href="shop.jsp">diam</a></li>
+										<li><a href="shop.jsp">amet</a></li>
 										<li><a href="#">placerat</a></li>
-										<li><a href="shop.html">Proin </a></li>
+										<li><a href="shop.jsp">Proin </a></li>
 										<li><a href="#">vehicula</a></li>
 										<li><a href="#">vehicula</a></li>
-										<li><a href="shop.html">velit</a></li>
-										<li><a href="shop.html">felis</a></li>
-										<li><a href="comedy.html">mauris</a></li>
+										<li><a href="shop.jsp">velit</a></li>
+										<li><a href="shop.jsp">felis</a></li>
+										<li><a href="comedy.jsp">mauris</a></li>
 									</ul>
 								</div>
 							</div>

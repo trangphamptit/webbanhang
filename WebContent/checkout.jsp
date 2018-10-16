@@ -65,7 +65,7 @@
 	<!-- breadcrumbs -->
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+			<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
 			<li class="breadcrumb-item active" aria-current="page">Contact
 				Us</li>
 		</ol>
@@ -98,7 +98,7 @@
 							<tr class="rem1">
 							<%ChiTietSanPham sanPham = (ChiTietSanPham)request.getAttribute("sanPham"); %>
 								<td class="invert">1</td>
-								<td class="invert-image"><a href="single_product.html">
+								<td class="invert-image"><a href="single_product.jsp">
 										<img src=<%=sanPham.getHinhAnh() %> alt=" " class="img-responsive">
 								</a></td>
 								<td class="invert">
@@ -124,7 +124,7 @@
 							</tr>
 							<tr class="rem2">
 								<td class="invert">2</td>
-								<td class="invert-image"><a href="single_product.html">
+								<td class="invert-image"><a href="single_product.jsp">
 										<img src="images/pf1.jpg" alt=" " class="img-responsive">
 								</a></td>
 								<td class="invert">
@@ -150,7 +150,7 @@
 							</tr>
 							<tr class="rem3">
 								<td class="invert">3</td>
-								<td class="invert-image"><a href="single_product.html">
+								<td class="invert-image"><a href="single_product.jsp">
 										<img src="images/pb3.jpg" alt=" " class="img-responsive">
 								</a></td>
 								<td class="invert">
@@ -194,7 +194,7 @@
 					</div>
 					<div class="col-md-8 address_form">
 						<h4>Billing Address</h4>
-						<form action="payment.html" method="post"
+						<form action="payment.jsp" method="post"
 							class="creditly-card-form shopf-sear-headinfo_form">
 							<div class="creditly-wrapper wrapper">
 								<div class="information-wrapper">

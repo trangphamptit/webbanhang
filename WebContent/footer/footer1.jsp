@@ -23,7 +23,7 @@
 					</ul>
 					<h3 class="text-center follow">Follow Us</h3>
 					<ul class="social-iconsv2 agileinfo">
-						<li><a href="#"> <i class="fab fa-facebook-f"></i>
+						<li><a href="https://www.facebook.com/"> <i class="fab fa-facebook-f"></i>
 						</a></li>
 						<li><a href="#"> <i class="fab fa-twitter"></i>
 						</a></li>
@@ -32,7 +32,7 @@
 						</a></li>
 						<li><a href="#"> <i class="fab fa-linkedin-in"></i>
 						</a></li>
-						<li><a href="#"> <i class="fab fa-google-plus-g"></i>
+						<li><a href="https://www.google.com.vn/"> <i class="fab fa-google-plus-g"></i>
 						</a></li>
 					</ul>
 				</div>
