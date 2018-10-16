@@ -30,7 +30,24 @@ public class UsersServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+	      String command = request.getParameter("command");
+	        String url = "";
+	        Users users = new Users();
+	        HttpSession session = request.getSession();
+	        switch (command) {
+	            case "insert":
+	                users.setUser_id(new java.util.Date().getTime());
+	                users.setUser_email(request.getParameter("email"));
+	                users.setUser_pass(request.getParameter("pass"));
+	                users.setUser_role(false);
+	                usersDAO.insertUser(users);
+	                session.setAttribute("user", users);
+	                url = "/index.jsp";
+	                break;
+	           
+	        }
+	        RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
+	        rd.forward(request, response);
 	}
 
 }
