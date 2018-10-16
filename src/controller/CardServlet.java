@@ -21,8 +21,23 @@ import model.ChiTietSanPham;
 @WebServlet("/Card")
 public class CardServlet extends HttpServlet {
 	
-	private String renderCard(ChiTietSanPham ctsp){
+	private String renderViewMore(int maNhom) {
+		String link = "men.jsp";
+		if(maNhom >= 8) {
+			link = "women.jsp";
+		}
 		String str = "<div class=\"item\">\r\n" + 
+				"							<div class=\"product-men p-3 text-center\">\r\n" + 
+				"								<img src=\"images/p2.png\" class=\"img-responsive\" alt=\"\" /> <a\r\n" + 
+				"									href=" + link + " class=\"btn btn-lg bg-info text-white\">view\r\n" + 
+				"									more</a>\r\n" + 
+				"							</div>\r\n" + 
+				"						</div>";
+		return str;
+	}
+	
+	private String renderCard(ChiTietSanPham ctsp){
+		String str = 
 				"		<!-- card -->\r\n" + 
 				"		<div class=\"card product-men p-3\">\r\n" + 
 				"			<div class=\"men-thumb-item\">\r\n" + 
@@ -61,8 +76,7 @@ public class CardServlet extends HttpServlet {
 				"				</form>\r\n" + 
 				"			</div>\r\n" + 
 				"		</div>\r\n" + 
-				"		<!-- //card -->\r\n" + 
-				"	</div>";
+				"		<!-- //card -->\r\n";
 		return str;
 	}
 	
@@ -75,7 +89,19 @@ public class CardServlet extends HttpServlet {
 		try {
 			ArrayList<ChiTietSanPham> cardsDataWomen = ChiTietSanPhamDAO.getCardsData(maNhom);
 			for (ChiTietSanPham ctsp : cardsDataWomen) {
-				response.getWriter().print(renderCard(ctsp));
+				if(request.getHeader("referer").indexOf("/men.jsp") > -1 || request.getHeader("referer").indexOf("/women.jsp") > -1) {
+					response.getWriter().print("<div class=\"col-lg-3 col-sm-6 p-0\">");
+					response.getWriter().print(renderCard(ctsp));
+					response.getWriter().print("</div>");
+				}
+				else{
+					response.getWriter().print("<div class=\"item\">");
+					response.getWriter().print(renderCard(ctsp));
+					response.getWriter().print("</div>");
+				}
+			}
+			if(request.getHeader("referer").indexOf("/index.jsp") > -1) {
+				response.getWriter().print(renderViewMore(maNhom));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
