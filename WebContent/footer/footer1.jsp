@@ -15,10 +15,10 @@
 			<div class="footer-bottomv2 py-5">
 				<div class="container">
 					<ul class="bottom-links-agile">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="shop.html">Shop</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="index.jsp">Home</a></li>
+						<li><a href="about.jsp">About Us</a></li>
+						<li><a href="shop.jsp">Shop</a></li>
+						<li><a href="contact.jsp">Contact</a></li>
 
 					</ul>
 					<h3 class="text-center follow">Follow Us</h3>

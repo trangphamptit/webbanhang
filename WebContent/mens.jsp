@@ -9,8 +9,7 @@
 <title>new fashion</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8" />
-<meta name="keywords"
-	content="web ban hang online" />
+<meta name="keywords" content="web ban hang online" />
 <script>
 	addEventListener("load", function() {
 		setTimeout(hideURLbar, 0);
@@ -80,24 +79,26 @@
 				<div class="col-lg-4 single-right-left">
 					<div class="grid images_3_of_2">
 						<div class="flexslider1">
-						<%ChiTietSanPham sanPham = (ChiTietSanPham) request.getAttribute("sanPham");%>
+							<%
+								ChiTietSanPham sanPham = (ChiTietSanPham) request.getAttribute("sanPham");
+							%>
 							<ul class="slides">
-								<li data-thumb=<%= sanPham.getHinhAnh()%>>
+								<li data-thumb=<%=sanPham.getHinhAnh()%>>
 									<div class="thumb-image">
-										<img src=<%= sanPham.getHinhAnh()%> data-imagezoom="true" alt=" "
-											class="img-fluid">
+										<img src=<%=sanPham.getHinhAnh()%> data-imagezoom="true"
+											alt=" " class="img-fluid">
 									</div>
 								</li>
-								<li data-thumb=<%= sanPham.getHinhAnh()%>>
+								<li data-thumb=<%=sanPham.getHinhAnh()%>>
 									<div class="thumb-image">
-										<img src=<%= sanPham.getHinhAnh()%> data-imagezoom="true" alt=" "
-											class="img-fluid">
+										<img src=<%=sanPham.getHinhAnh()%> data-imagezoom="true"
+											alt=" " class="img-fluid">
 									</div>
 								</li>
-								<li data-thumb=<%= sanPham.getHinhAnh()%>>
+								<li data-thumb=<%=sanPham.getHinhAnh()%>>
 									<div class="thumb-image">
-										<img src=<%= sanPham.getHinhAnh()%> data-imagezoom="true" alt=" "
-											class="img-fluid">
+										<img src=<%=sanPham.getHinhAnh()%> data-imagezoom="true"
+											alt=" " class="img-fluid">
 									</div>
 								</li>
 							</ul>
@@ -107,7 +108,7 @@
 				</div>
 				<div
 					class="col-lg-8 mt-lg-0 mt-5 single-right-left simpleCart_shelfItem">
-					<h3><%= sanPham.getTenSanPham() %></h3>
+					<h3><%=sanPham.getTenSanPham()%></h3>
 					</h3>
 					<div class="caption">
 
@@ -129,20 +130,41 @@
 							</a></li>
 						</ul>
 						<div class="clearfix"></div>
-						<h6><%= sanPham.getGiaGiam() %></h6>
+						<h6><%=sanPham.getGiaGiam()%></h6>
 					</div>
 					<div class="desc_single">
 						<h5>Mô tả</h5>
-						<p><%= sanPham.getChiTiet() %></p>
+						<p><%=sanPham.getChiTiet()%></p>
 					</div>
 					<div class="d-sm-flex justify-content-between">
 						<div class="occasional">
-							<h5 class="sp_title mb-3">Highlights</h5>
+							<h5 class="sp_title mb-3">Thông tin sản phẩm</h5>
 							<ul class="single_specific">
-								<li><span>Fabric: </span> Poly-Viscose</li>
-								<li><span>Pattern :</span> Solid</li>
-								<li><span>Type :</span> Single Breasted</li>
-								<li><span>Fit :</span> Slim</li>
+								<li><span>Thương hiệu: </span> Poly-Viscose</li>
+								<li><span>Màu sắc :</span> Solid</li>
+								<li><span>Kích thước :</span>
+									<form>
+										<label class="radio-inline"> <input type="radio"
+											name="optradio" checked>S
+										</label> <label class="radio-inline"> <input type="radio"
+											name="optradio">M
+										</label> <label class="radio-inline"> <input type="radio"
+											name="optradio">L
+										</label>
+										</label> <label class="radio-inline"> <input type="radio"
+											name="optradio">XL
+										</label>
+										</label> <label class="radio-inline"> <input type="radio"
+											name="optradio">XXL
+										</label>
+										</label> <label class="radio-inline"> <input type="radio"
+											name="optradio">FREESIZE
+										</label>
+										
+									</form></li>
+								<li><span>Chất liệu :</span> Slim</li>
+								<li><span>Ngành hàng :</span> Slim</li>
+								<li><span>Tình trạng sản phẩm :</span> Slim</li>
 							</ul>
 
 						</div>
@@ -168,8 +190,9 @@
 							<form action="#" method="post">
 								<input type="hidden" name="cmd" value="_cart"> <input
 									type="hidden" name="add" value="1"> <input
-									type="hidden" name="hub_item" value="<%= sanPham.getTenSanPham() %>">
-								<input type="hidden" name="amount" value=<%= sanPham.getGiaGiam() %>>
+									type="hidden" name="hub_item"
+									value="<%=sanPham.getTenSanPham()%>"> <input
+									type="hidden" name="amount" value=<%=sanPham.getGiaGiam()%>>
 								<button type="submit" class="hub-cart phub-cart btn">
 									<i class="fa fa-cart-plus" aria-hidden="true"></i>
 								</button>
@@ -185,7 +208,7 @@
 	<div class="section singlep_btm pb-5">
 		<div class="container">
 			<div class="new_arrivals">
-				<h4 class="rad-txt text-capitalize">you may also be interested
+				<h4 class="rad-txt text-capitalize">SẢN PHẨM THƯỜNG ĐƯỢC XEM CÙNG
 					in</h4>
 				<!-- card group 2 -->
 				<div class="card-group my-5">

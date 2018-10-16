@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -89,7 +89,7 @@
 								<img src="images/pm11.jpg" alt="img" class="card-img-top">
 								<div class="men-cart-pro">
 									<div class="inner-men-cart-pro">
-										<a href="mens.html" class="link-product-add-cart">Quick
+										<a href="mens.jsp" class="link-product-add-cart">Quick
 											View</a>
 									</div>
 								</div>
@@ -127,7 +127,7 @@
 								<img src="images/pm12.jpg" alt="img" class="card-img-top">
 								<div class="men-cart-pro">
 									<div class="inner-men-cart-pro">
-										<a href="mens.html" class="link-product-add-cart">Quick
+										<a href="mens.jsp" class="link-product-add-cart">Quick
 											View</a>
 									</div>
 								</div>
@@ -165,7 +165,7 @@
 								<img src="images/pm13.jpg" alt="img" class="card-img-top">
 								<div class="men-cart-pro">
 									<div class="inner-men-cart-pro">
-										<a href="mens.html" class="link-product-add-cart">Quick
+										<a href="mens.jsp" class="link-product-add-cart">Quick
 											View</a>
 									</div>
 								</div>
@@ -197,7 +197,7 @@
 					<!-- //card -->
 					<div class="col-lg-3 col-sm-6">
 						<div class="card py-sm-5 border-0">
-							<a class="btn-lg btn-secondary text-center m-5" href="men.html">View
+							<a class="btn-lg btn-secondary text-center m-5" href="men.jsp">View
 								More</a>
 						</div>
 					</div>
@@ -216,7 +216,7 @@
 								<img src="images/pf6.jpg" alt="img" class="card-img-top">
 								<div class="men-cart-pro">
 									<div class="inner-men-cart-pro">
-										<a href="womens.html" class="link-product-add-cart">Quick
+										<a href="womens.jsp" class="link-product-add-cart">Quick
 											View</a>
 									</div>
 								</div>
@@ -254,7 +254,7 @@
 								<img src="images/pf8.jpg" alt="img" class="card-img-top">
 								<div class="men-cart-pro">
 									<div class="inner-men-cart-pro">
-										<a href="womens.html" class="link-product-add-cart">Quick
+										<a href="womens.jsp" class="link-product-add-cart">Quick
 											View</a>
 									</div>
 								</div>
@@ -311,7 +311,7 @@
 					<!-- //card -->
 					<div class="col-lg-3 col-sm-6">
 						<div class="card py-sm-5 border-0">
-							<a class="btn-lg btn-secondary text-center m-5" href="women.html">View
+							<a class="btn-lg btn-secondary text-center m-5" href="women.jsp">View
 								More</a>
 						</div>
 					</div>
@@ -380,7 +380,7 @@
 					<h5 class="modal-title">Register Now</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
-						<span aria-hidden="true">×</span>
+						<span aria-hidden="true">Ã—</span>
 					</button>
 				</div>
 				<div class="modal-body pt-3 pb-5 px-sm-5">
@@ -444,7 +444,7 @@
 					<h5 class="modal-title" id="exampleModalLabel">Login</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
-						<span aria-hidden="true">×</span>
+						<span aria-hidden="true">Ã—</span>
 					</button>
 				</div>
 				<div class="modal-body  pt-3 pb-5 px-sm-5">

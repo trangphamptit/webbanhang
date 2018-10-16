@@ -5,25 +5,25 @@
 <head>
 <meta charset="UTF-8">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-      $(document).ready(function () {
-           var x_timer;
-           $("#username").keyup(function (e) {
-                clearTimeout(x_timer);
-                var user_name = $(this).val();
-                x_timer = setTimeout(function () {
-                    check_username_ajax(user_name);
-                }, 1000);
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var x_timer;
+                $("#email").keyup(function (e) {
+                    clearTimeout(x_timer);
+                    var user_name = $(this).val();
+                    x_timer = setTimeout(function () {
+                        check_username_ajax(user_name);
+                    }, 1000);
                 });
- 
-           function check_username_ajax(username) {
-                $("#user-result").html('<img src="img/ajax-loader.gif" />');
-                $.post('CheckEmailServlet', {'username': username}, function (data) {
-                    $("#user-result").html(data);
-                 });
-           }
-       });
-</script>
+
+                function check_username_ajax(username) {
+                    $("#user-result").html('<img src="img/ajax-loader.gif" />');
+                    $.post('CheckEmailServlet', {'username': username}, function (data) {
+                        $("#user-result").html(data);
+                    });
+                }
+            });
+        </script>
 </head>
 <body>
 	<div class="modal fade" id="myModal_btn" tabindex="-1" role="dialog"
@@ -31,7 +31,7 @@
 		<div class="agilemodal-dialog modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Đăng kí</h5>
+					<h5 class="modal-title">Đăng ký</h5>
 					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">×</span>
@@ -43,21 +43,23 @@
 							<img src="images/p3.png" class="img-fluid" alt="login_image" />
 						</div>
 						<div class="col-md-6">
-							<form action="#" method="post">
+							<form action="UsersServlet" method = "POST">
 								<div class="form-group">
 									<label for="recipient-name1" class="col-form-label">Họ tên*
 							</label> <input type="text" class="form-control" placeholder=" "
 										name="Name" id="recipient-name1" required="">
 								</div>
 								<div class="form-group">
-									<label for="recipient-email" class="col-form-label">Email*</label>
+									<label for="email" class="col-form-label">Email*</label>
 									<input type="email" class="form-control" placeholder=" "
-										name="Email" id="recipient-email" required="">
+										name="email" id="email" required="">
+										<span id = "user-result"></span>
 								</div>
 								<div class="form-group">
 									<label for="password1" class="col-form-label">Mật khẩu*</label>
 									<input type="password" class="form-control" placeholder=" "
 										name="Password" id="password1" required="">
+										<span></span>
 								</div>
 								<div class="form-group">
 									<label for="password2" class="col-form-label">Xác nhận mật khẩu*</label> 
@@ -73,6 +75,7 @@
 									</div>
 								</div>
 								<div class="right-w3l">
+								<input type="hidden" value="insert" name="command">
 									<input type="submit" class="form-control" value="Đăng ký">
 								</div>
 							</form>

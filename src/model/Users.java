@@ -1,52 +1,52 @@
 package model;
 
 public class Users {
-	private int maKhachHang;
-	private String email;
-	private String pass;
-	private boolean role;
+	private long user_id;
+	private String user_email;
+	private String user_pass;
+	private boolean user_role;
 
-	public Users(int maKhachHang, String email, String pass, boolean role) {
-		this.maKhachHang = maKhachHang;
-		this.email = email;
-		this.pass = pass;
-		this.role = role;
+	public Users(long user_id, String user_email, String user_pass, boolean user_role) {
+		this.user_id = user_id;
+		this.user_email = user_email;
+		this.user_pass = user_pass;
+		this.user_role = user_role;
 	}
 
 	public Users() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public int getMaKhachHang() {
-		return maKhachHang;
+	public long getUser_id() {
+		return user_id;
 	}
 
-	public void setMaKhachHang(int maKhachHang) {
-		this.maKhachHang = maKhachHang;
+	public void setUser_id(long user_id) {
+		this.user_id = user_id;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getUser_email() {
+		return user_email;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUser_email(String user_email) {
+		this.user_email = user_email;
 	}
 
-	public String getPass() {
-		return pass;
+	public String getUser_pass() {
+		return user_pass;
 	}
 
-	public void setPass(String pass) {
-		this.pass = pass;
+	public void setUser_pass(String user_pass) {
+		this.user_pass = user_pass;
 	}
 
-	public boolean isRole() {
-		return role;
+	public boolean isUser_role() {
+		return user_role;
 	}
 
-	public void setRole(boolean role) {
-		this.role = role;
+	public void setUser_role(boolean user_role) {
+		this.user_role = user_role;
 	}
 
 }

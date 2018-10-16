@@ -9,24 +9,42 @@ import java.util.logging.Logger;
 import com.mysql.jdbc.Connection;
 
 import connect.KetNoi;
+import model.Users;
 
 public class UsersDAO {
-	public boolean checkEmail(String email) {
-		Connection con = KetNoi.getConnection();
-		String sql = "SELECT * FROM users WHERE email= ?";
-		PreparedStatement ps;
-		try {
-			ps = con.prepareCall(sql);
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				con.close();
-				return true;
-			}
-		} catch (SQLException e) {
-			// TODO: handle exception
-			Logger.getLogger(UsersDAO.class.getName()).log(Level.SEVERE, null, e);
-
-		}
-		return false;
-	}
+	 // kiểm tra email tồn tại chưa
+    public boolean checkEmail(String email) {
+        Connection connection = KetNoi.getConnection();
+        String sql = "SELECT * FROM users WHERE user_email = ?";
+        try {
+        	PreparedStatement ps = connection.prepareStatement(sql);
+        	ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                connection.close();
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UsersDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+    
+    // phương thức thêm tài khoản
+    public boolean insertUser(Users u) {
+        Connection connection = KetNoi.getConnection();
+        String sql = "INSERT INTO users VALUES(?,?,?,?)";
+        try {
+            PreparedStatement ps = connection.prepareCall(sql);
+            ps.setLong(1, u.getUser_id());
+            ps.setString(2, u.getUser_email());
+            ps.setString(3, u.getUser_pass());
+            ps.setBoolean(4, u.isUser_role());
+            ps.executeUpdate();
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(UsersDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
 }
