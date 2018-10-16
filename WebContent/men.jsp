@@ -95,24 +95,12 @@
 				<div class="side-bar col-lg-3">
 					<!--preference -->
 					<div class="left-side">
-						<h3 class="shopf-sear-headits-sear-head">Categories</h3>
-						<ul>
-							<li><input type="checkbox" class="checked" name="cat1"
-								id="cat1"> <label for="cat1">Fashion</label></li>
-							<li><input type="checkbox" class="checked" name="cat2"
-								id="cat2"> <label for="cat2">Popular</label></li>
-							<li><input type="checkbox" class="checked" name="cat3"
-								id="cat3"> <label for="cat3">Trending</label></li>
-							<li><input type="checkbox" class="checked" name="cat4"
-								id="cat4"> <label for="cat4">Sort by popularity</label>
-							</li>
-
-						</ul>
+					
 					</div>
 					<!-- // preference -->
 					<div class="search-hotel">
 						<h3 class="shopf-sear-headits-sear-head">
-							<span>Brand</span> in focus
+							<span>THƯƠNG HIỆU QUAN TÂM</span> 
 						</h3>
 						<form action="#" method="post">
 							<input type="search" placeholder="search here" name="search"
@@ -122,7 +110,7 @@
 					<!-- price range -->
 					<div class="range">
 						<h3 class="shopf-sear-headits-sear-head">
-							<span>Price</span> range
+							<span>GIÁ</span>
 						</h3>
 						<ul class="dropdown-menu6">
 							<li>
@@ -134,29 +122,15 @@
 					</div>
 					<!-- //price range -->
 					<!--preference -->
-					<div class="left-side">
-						<h3 class="shopf-sear-headits-sear-head">
-							<span>latest</span> arrivals
-						</h3>
-						<ul>
-							<li><input type="checkbox" class="checked" name="arr1"
-								id="arr1"> <label for="arr1">last 30 days</label></li>
-							<li><input type="checkbox" class="checked" name="arr2"
-								id="arr2"> <label for="arr2">last 90 days</label></li>
-							<li><input type="checkbox" class="checked" name="arr3"
-								id="arr3"> <label for="arr3">last 150 days</label></li>
-
-						</ul>
-					</div>
+				
 					<!-- // preference -->
 					<!-- discounts -->
 					<div class="left-side">
 						<h3 class="shopf-sear-headits-sear-head">Sizes</h3>
 						<ul>
 							<li><input type="checkbox" class="checked" name="size1"
-								id="size1"> <label for="size1">XS</label></li>
-							<li><input type="checkbox" class="checked" name="size2"
-								id="size2"> <label for="size2">S</label></li>
+								id="size1"> <label for="size1">S</label></li>
+							
 							<li><input type="checkbox" class="checked" name="size3"
 								id="size3"> <label for="size3">M</label></li>
 							<li><input type="checkbox" class="checked" name="size4"
@@ -166,44 +140,44 @@
 							<li><input type="checkbox" class="checked" name="size6"
 								id="size6"> <label for="size6">XXL</label></li>
 							<li><input type="checkbox" class="checked" name="size7"
-								id="size7"> <label for="size7">XXXL</label></li>
+								id="size7"> <label for="size7">FREESIZE</label></li>
 						</ul>
 					</div>
 					<!-- //discounts -->
 					<!-- Binding -->
 					<div class="left-side">
-						<h3 class="shopf-sear-headits-sear-head">Color</h3>
+						<h3 class="shopf-sear-headits-sear-head">MÀU SẮC</h3>
 						<div class="d-flex">
 							<ul>
 								<li><input type="checkbox" class="checked" name="color1"
-									id="color1"> <label for="color1">Black</label></li>
+									id="color1"> <label for="color1">Đen</label></li>
 								<li><input type="checkbox" class="checked" name="color2"
-									id="color2"> <label for="color2">Blue</label></li>
+									id="color2"> <label for="color2">Xanh</label></li>
 								<li><input type="checkbox" class="checked" name="color3"
-									id="color3"> <label for="color3">Red</label></li>
+									id="color3"> <label for="color3">Đỏ</label></li>
 								<li><input type="checkbox" class="checked" name="color4"
-									id="color4"> <label for="color4">Yellow</label></li>
+									id="color4"> <label for="color4">Vàng</label></li>
 								<li><input type="checkbox" class="checked" name="color5"
-									id="color5"> <label for="color5">White</label></li>
+									id="color5"> <label for="color5">Trắng</label></li>
 							</ul>
 							<ul>
 								<li><input type="checkbox" class="checked" name="color6"
-									id="color6"> <label for="color6">Green</label></li>
+									id="color6"> <label for="color6">Xanh lá</label></li>
 								<li><input type="checkbox" class="checked" name="color7"
-									id="color7"> <label for="color7">Multi</label></li>
+									id="color7"> <label for="color7">Nâu</label></li>
 								<li><input type="checkbox" class="checked" name="color8"
-									id="color8"> <label for="color8">Purple</label></li>
+									id="color8"> <label for="color8">Xám</label></li>
 								<li><input type="checkbox" class="checked" name="color9"
-									id="color9"> <label for="color9">Gold</label></li>
+									id="color9"> <label for="color9">Hỗn hợp</label></li>
 								<li><input type="checkbox" class="checked" name="color10"
-									id="color10"> <label for="color10">Orange</label></li>
+									id="color10"> <label for="color10">Cam</label></li>
 							</ul>
 						</div>
 					</div>
 					<!-- //Binding -->
 					<!-- discounts -->
 					<div class="left-side">
-						<h3 class="shopf-sear-headits-sear-head">Discount</h3>
+						<h3 class="shopf-sear-headits-sear-head">GIẢM GIÁ</h3>
 						<ul>
 							<li><input type="checkbox" class="checked" name="dis1"
 								id="dis1"> <label for="dis1">5% - 20%</label></li>
@@ -218,7 +192,7 @@
 					<!-- //discounts -->
 					<!-- reviews -->
 					<div class="customer-rev left-side">
-						<h3 class="shopf-sear-headits-sear-head">Customer Review</h3>
+						<h3 class="shopf-sear-headits-sear-head">ĐÁNH GIÁ</h3>
 						<ul>
 							<li><a href="#"> <i class="fa fa-star"
 									aria-hidden="true"></i> <i class="fa fa-star"
