@@ -29,7 +29,7 @@ public class DBConnection {
 	private static void openConnection() throws Exception {
 		String url = "jdbc:mysql://localhost:3306/webbanhang";
 		String user = "root";
-		String password = "123";
+		String password = "root";
 		dbConnection = DriverManager.getConnection(url, user, password);
 	}
 

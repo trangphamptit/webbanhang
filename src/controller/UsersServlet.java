@@ -17,7 +17,7 @@ import sun.security.provider.MD5;
 /**
  * Servlet implementation class UsersServlet
  */
-@WebServlet("/UsersServlet")
+@WebServlet("/Users")
 public class UsersServlet extends HttpServlet {
 	UsersDAO usersDAO = new UsersDAO();
 

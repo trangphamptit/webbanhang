@@ -14,7 +14,6 @@ public class Users {
 	}
 
 	public Users() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public long getUser_id() {
@@ -49,4 +48,5 @@ public class Users {
 		this.user_role = user_role;
 	}
 
+	
 }

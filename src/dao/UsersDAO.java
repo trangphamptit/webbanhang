@@ -13,7 +13,7 @@ import model.Users;
 
 public class UsersDAO {
 	 // kiểm tra email tồn tại chưa
-    public boolean checkEmail(String email) {
+    public static boolean checkEmail(String email) {
         Connection connection = KetNoi.getConnection();
         String sql = "SELECT * FROM users WHERE user_email = ?";
         try {
@@ -47,4 +47,8 @@ public class UsersDAO {
         }
         return false;
     }
+
+	public static void main(String[] args) {
+		System.out.println(checkEmail("abc@gmail.com"));
+	}
 }
