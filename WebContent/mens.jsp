@@ -130,6 +130,9 @@
 							</a></li>
 						</ul>
 						<div class="clearfix"></div>
+						<div class="percent"
+							style="background-color: orange; width: 50px; height: 30px;color: white; font-weight: 1px;padding: 5px;">-30%
+						</div>
 						<h6><%=sanPham.getGiaGiam()%></h6>
 					</div>
 					<div class="desc_single">
@@ -150,17 +153,14 @@
 											name="optradio">M
 										</label> <label class="radio-inline"> <input type="radio"
 											name="optradio">L
-										</label>
-										</label> <label class="radio-inline"> <input type="radio"
+										</label> </label> <label class="radio-inline"> <input type="radio"
 											name="optradio">XL
-										</label>
-										</label> <label class="radio-inline"> <input type="radio"
+										</label> </label> <label class="radio-inline"> <input type="radio"
 											name="optradio">XXL
-										</label>
-										</label> <label class="radio-inline"> <input type="radio"
+										</label> </label> <label class="radio-inline"> <input type="radio"
 											name="optradio">FREESIZE
 										</label>
-										
+
 									</form></li>
 								<li><span>Chất liệu :</span> Slim</li>
 								<li><span>Ngành hàng :</span> Slim</li>
@@ -177,14 +177,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="description">
-						<h5>Check delivery, payment options and charges at your
-							location</h5>
-						<form action="#" method="post">
-							<input type="text" placeholder="Enter pincode" required /> <input
-								type="submit" value="Check">
-						</form>
-					</div>
+				
 					<div class="occasion-cart">
 						<div class="chr single-item single_page_b">
 							<form action="#" method="post">
@@ -208,8 +201,8 @@
 	<div class="section singlep_btm pb-5">
 		<div class="container">
 			<div class="new_arrivals">
-				<h4 class="rad-txt text-capitalize">SẢN PHẨM THƯỜNG ĐƯỢC XEM CÙNG
-					in</h4>
+				<h4 class="rad-txt text-capitalize">SẢN PHẨM THƯỜNG ĐƯỢC XEM
+					CÙNG in</h4>
 				<!-- card group 2 -->
 				<div class="card-group my-5">
 					<!-- card -->
