@@ -1,3 +1,4 @@
+<%@page import="dao.ChiTietSanPhamDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -258,38 +259,22 @@
 				<!-- grid right -->
 				<div class="col-lg-9 mt-lg-0 mt-5 right-product-grid">
 					<!-- card group  -->
+					<%
+						ChiTietSanPhamDAO ctsp = new ChiTietSanPhamDAO();
+						String maNhom = "";
+						if(request.getParameter("nhom") != null){
+							maNhom = request.getParameter("nhom");
+							
+						}
+						
+					%>
 					<div class="card-group inside-data0">
 						<script type="text/javascript">
-							hello(0, 8);
+							hello(0, <%=maNhom%>);
 						</script>
 					</div>
 					<!-- //card group 1-->
-					<!-- card group 2 -->
-					<div class="card-group my-5 inside-data1">
-						<script type="text/javascript">
-							hello(1, 9);
-						</script>
-					</div>
-					<!-- //card group -->
-					<!-- card group  -->
-					<div class="card-group inside-data2">
-						<script type="text/javascript">
-							hello(2, 10);
-						</script>
-					</div>
-					<!-- //card group -->
-					<!-- card group  -->
-					<div class="card-group mt-5 inside-data3">
-						<script type="text/javascript">
-							hello(3, 11);
-						</script>
-					</div>
-					<!-- //card group -->
-					<div class="card-group mt-5 inside-data4">
-						<script type="text/javascript">
-							hello(4, 12);
-						</script>
-					</div>
+					
 				</div>
 			</div>
 		</div>
