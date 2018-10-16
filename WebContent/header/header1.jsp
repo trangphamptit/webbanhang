@@ -7,21 +7,6 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<script>
-function search(obj)
-{
-    var menu = document.getElementById('select');
-    var btn = document.getElementById('search');
-    var link = menuCon.get(obj).getLink();
-    var value = obj.value;
-    if (value === ''){
-        window.location="index.jsp";
-    }
-    else {
-    	window.location=link;
-    }
-}
-</script>
 </head>
 <body>
 	<nav class="top_nav d-flex pt-3 pb-1">
@@ -36,11 +21,11 @@ function search(obj)
 				method="post">
 				<select class="form-control input-lg" id="mySelect" name="category">
 					<option value="index.jsp">Tìm kiếm</option>
+					<option value="shop.jsp">ALL</option>
 					<%!ArrayList<Menu> menuCha = MenuDao.getMenuCha();%>
 					<%
 						for (int i = 1; i < menuCha.size(); i++) {
 					%>
-					<option value="shop.jsp">ALL</option>
 					<optgroup label="<%=menuCha.get(i).getTenMenu()%>">
 						<%
 							ArrayList<Menu> menuCon = MenuDao.getMenuCon(menuCha.get(i).getMaMenu());

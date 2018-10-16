@@ -237,28 +237,22 @@
 				<!-- grid right -->
 				<div class="col-lg-9 mt-lg-0 mt-5 right-product-grid">
 					<!-- card group  -->
+					<%
+						ChiTietSanPhamDAO ctsp = new ChiTietSanPhamDAO();
+						String maNhom = "";
+						if(request.getParameter("nhom") != null){
+							maNhom = request.getParameter("nhom");
+							
+						}
+						
+					%>
 					<div class="card-group inside-data0">
-						<script type="text/javascript">hello(0, 1);</script>
+						<script type="text/javascript">
+							hello(0, <%=maNhom%>);
+						</script>
 					</div>
 					<!-- //card group 1-->
-					<!-- card group 2 -->
-					<div class="card-group my-5 inside-data1">
-						<script type="text/javascript">hello(1, 2);</script>
-					</div>
-					<!-- //card group -->
-					<!-- card group  -->
-					<div class="card-group inside-data2">
-						<script type="text/javascript">hello(2, 3);</script>
-					</div>
-					<!-- //card group -->
-					<!-- card group  -->
-					<div class="card-group mt-5 inside-data3">
-					<script type="text/javascript">hello(3, 4);</script>
-					</div>
-					<!-- //card group -->
-					<div class="card-group mt-5 inside-data4">
-						<script type="text/javascript">hello(4, 5);</script>
-					</div>
+					
 				</div>
 			</div>
 		</div>
