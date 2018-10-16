@@ -65,8 +65,8 @@
 	<!-- breadcrumbs -->
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-			<li class="breadcrumb-item"><a href="men.html">Men's
+			<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
+			<li class="breadcrumb-item"><a href="men.jsp">Men's
 					Clothing</a></li>
 			<li class="breadcrumb-item active" aria-current="page">Single
 				Product</li>
@@ -196,7 +196,7 @@
 								<img src="images/pm11.jpg" alt="img" class="card-img-top">
 								<div class="men-cart-pro">
 									<div class="inner-men-cart-pro">
-										<a href="mens.html" class="link-product-add-cart">Quick
+										<a href="mens.jsp" class="link-product-add-cart">Quick
 											View</a>
 									</div>
 								</div>
@@ -234,7 +234,7 @@
 								<img src="images/pm12.jpg" alt="img" class="card-img-top">
 								<div class="men-cart-pro">
 									<div class="inner-men-cart-pro">
-										<a href="mens.html" class="link-product-add-cart">Quick
+										<a href="mens.jsp" class="link-product-add-cart">Quick
 											View</a>
 									</div>
 								</div>
@@ -297,7 +297,7 @@
 								<img src="images/pm13.jpg" alt="img" class="card-img-top">
 								<div class="men-cart-pro">
 									<div class="inner-men-cart-pro">
-										<a href="mens.html" class="link-product-add-cart">Quick
+										<a href="mens.jsp" class="link-product-add-cart">Quick
 											View</a>
 									</div>
 								</div>

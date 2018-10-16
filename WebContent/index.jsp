@@ -190,8 +190,7 @@
 	<!-- product tabs -->
 	<section class="tabs_pro py-md-5 pt-sm-3 pb-5">
 		<h5 class="head_agileinfo text-center text-capitalize pb-5">
-			<span>s</span>mart clothing
-		</h5>
+			<span>s</span>mart clothing</h5>
 		<div class="tabs tabs-style-line pt-md-5">
 			<nav class="container">
 				<ul id="clothing-nav" class="nav nav-tabs tabs-style-line"
@@ -203,6 +202,9 @@
 						role="tab" id="men-tab" data-toggle="tab" aria-controls="men">Áo Quần Nam </a></li>
 				</ul>
 			</nav>
+			<!-- 
+			
+			 -->
 			<!-- Content Panel -->
 			<div id="clothing-nav-content" class="tab-content py-sm-5">
 				<div role="tabpanel" class="tab-pane fade show active" id="women"
@@ -222,27 +224,13 @@
 
 							<div class="product-men p-3 text-center">
 								<img src="images/p2.png" class="img-responsive" alt=""> <a
-									href="men.html" class="btn btn-lg bg-info text-white">view
+									href="men.jsp" class="btn btn-lg bg-info text-white">view
 									more</a>
 							</div>
 							<!-- //card -->
 						</div>
 					</div>
 				</div>
-			
-
-<!-- 				<div role="tabpanel" class="tab-pane fade" id="girl" -->
-<!-- 					aria-labelledby="girl-tab"> -->
-<!-- 					<div id="owl-demo2" class="owl-carousel text-center"> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-
-<!-- 				<div role="tabpanel" class="tab-pane fade" id="boy" -->
-<!-- 					aria-labelledby="boy-tab"> -->
-<!-- 					<div id="owl-demo3" class="owl-carousel text-center"> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-
 			</div>
 		</div>
 	</section>
