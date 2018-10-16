@@ -12,9 +12,15 @@ public class Users {
 		this.pass = pass;
 		this.role = role;
 	}
+	
+	public Users(int maKhachHang, String email, String pass) {
+		super();
+		this.maKhachHang = maKhachHang;
+		this.email = email;
+		this.pass = pass;
+	}
 
 	public Users() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getMaKhachHang() {
@@ -49,4 +55,10 @@ public class Users {
 		this.role = role;
 	}
 
+	@Override
+	public String toString() {
+		return "Users [maKhachHang=" + maKhachHang + ", email=" + email + ", pass=" + pass + ", role=" + role + "]";
+	}
+
+	
 }

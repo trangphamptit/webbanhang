@@ -60,13 +60,15 @@ public class CardServlet extends HttpServlet {
 				"			</div>\r\n" + 
 				"			<!-- card footer -->\r\n" + 
 				"			<div class=\"card-footer d-flex justify-content-end\">\r\n" + 
-				"				<form action=\"Card\" method=\"post\">\r\n" + 
-				"					<input type=\"hidden\" name=\"cmd\" value=\"_cart\"> <input\r\n" + 
+				"				<form action=\"#\" method=\"post\">\r\n" + 
+				"					<input type=\"hidden\" name=\"cmd\" value=\"_cart\"> <input\r\n" +
+				"						type=\"hidden\" name=\"href\" value=\"Detail?id=" + ctsp.getMaSanPham() + "\"> <input\r\n" +
 				"						type=\"hidden\" name=\"add\" value=\"1\"> <input\r\n" + 
+				"						type=\"hidden\" name=\"item_number\" value=" + ctsp.getMaSanPham() + "> <input\r\n" + 
 				"						type=\"hidden\" name=\"id\"\r\n" + 
 				"						value=" + ctsp.getMaSanPham() + "> <input\r\n" + 
 				"						type=\"hidden\" name=\"hub_item\"\r\n" + 
-				"						value="+ ctsp.getTenSanPham() + "> <input\r\n" + 
+				"						value=\""+ ctsp.getTenSanPham() + "\"> <input\r\n" + 
 				"						type=\"hidden\" name=\"amount\"\r\n" + 
 				"						value="+ ctsp.getGiaGiam()+">\r\n" + 
 				"					<button type=\"submit\" class=\"hub-cart phub-cart btn\">\r\n" + 
@@ -112,17 +114,7 @@ public class CardServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int maSanPham = Integer.parseInt(request.getParameter("id"));
-		System.out.println(maSanPham);
-		try {
-			ChiTietSanPham ctsp = ChiTietSanPhamDAO.getChiTietSanPhamTheoMa(maSanPham);
-			request.setAttribute("sanPham", ctsp);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
 		
-		RequestDispatcher rd = request.getRequestDispatcher("checkout.jsp");
-		rd.forward(request, response);
 	}
 
 }

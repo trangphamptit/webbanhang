@@ -9,14 +9,15 @@ import java.util.logging.Logger;
 import com.mysql.jdbc.Connection;
 
 import connect.KetNoi;
+import model.Users;
 
 public class UsersDAO {
-	public boolean checkEmail(String email) {
+	public static boolean checkEmail(String email) {
 		Connection con = KetNoi.getConnection();
-		String sql = "SELECT * FROM users WHERE email= ?";
-		PreparedStatement ps;
+		String sql = "select * from users WHERE email= ?";
 		try {
-			ps = con.prepareCall(sql);
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, email);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				con.close();
@@ -28,5 +29,22 @@ public class UsersDAO {
 
 		}
 		return false;
+	}
+	
+	public static boolean insert(Users user) {
+		Connection con = KetNoi.getConnection();
+		String sql = "INSERT INTO users(username, password, email) value(?, ?, ?)";
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+//			ps.setString(1, user.ge);
+			ps.setString(2, user.getPass());
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(checkEmail("abc@gmail.com"));
 	}
 }

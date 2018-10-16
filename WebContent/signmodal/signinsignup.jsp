@@ -43,7 +43,7 @@
 							<img src="images/p3.png" class="img-fluid" alt="login_image" />
 						</div>
 						<div class="col-md-6">
-							<form action="#" method="post">
+							<form action="<%=request.getContextPath() %>/User" method="post">
 								<div class="form-group">
 									<label for="recipient-name1" class="col-form-label">Họ tên*
 							</label> <input type="text" class="form-control" placeholder=" "
