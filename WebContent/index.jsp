@@ -19,7 +19,6 @@
 	addEventListener("load", function() {
 		setTimeout(hideURLbar, 0);
 	}, false);
-
 	function hideURLbar() {
 		window.scrollTo(0, 1);
 	}
@@ -97,7 +96,7 @@
 									</div>
 								</div>
 								<p class="text-uppercase py-2">on special sale</p>
-								<a class="btn btn-primary mt-3 text-capitalize" href="shop.html"
+								<a class="btn btn-primary mt-3 text-capitalize" href="shop.jsp"
 									role="button">shop now</a>
 							</div>
 						</div>
@@ -130,7 +129,7 @@
 									</div>
 								</div>
 								<p class="text-uppercase py-2">on special sale</p>
-								<a class="btn btn-primary mt-3 text-capitalize" href="shop.html"
+								<a class="btn btn-primary mt-3 text-capitalize" href="shop.jsp"
 									role="button">shop now</a>
 							</div>
 						</div>
@@ -171,7 +170,7 @@
 				<img class="img-fluid" src="images/a1.jpg" alt="">
 				<div class="overlay">
 					<h5>Áo Quần Nam</h5>
-					<a class="info" href="women.html">Shop Now</a>
+					<a class="info" href="women.jsp">Shop Now</a>
 				</div>
 			</div>
 		</div>
@@ -180,7 +179,7 @@
 				<img class="img-fluid" src="images/a2.jpg" alt="">
 				<div class="overlay">
 					<h5>Áo Quần Nữ</h5>
-					<a class="info" href="men.html">Shop Now</a>
+					<a class="info" href="men.jsp">Shop Now</a>
 				</div>
 			</div>
 		</div>
@@ -288,7 +287,6 @@
 			document.getElementById("password1").onchange = validatePassword;
 			document.getElementById("password2").onchange = validatePassword;
 		}
-
 		function validatePassword() {
 			var pass2 = document.getElementById("password2").value;
 			var pass1 = document.getElementById("password1").value;
@@ -320,7 +318,6 @@
 					$('.events').append("<li>after event fired.</li>");
 				}
 			});
-
 		});
 	</script>
 	<!-- // Banner Responsiveslides -->
@@ -358,13 +355,10 @@
 	</script>
 	<script>
 		hub.render();
-
 		hub.cart.on('new_checkout', function(evt) {
 			var items, len, i;
-
 			if (this.subtotal() > 0) {
 				items = this.items();
-
 				for (i = 0, len = items.length; i < len; i++) {
 				}
 			}
@@ -378,7 +372,6 @@
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event) {
 				event.preventDefault();
-
 				$('html,body').animate({
 					scrollTop : $(this.hash).offset().top
 				}, 1000);
@@ -397,11 +390,9 @@
 			    easingType: 'linear' 
 			};
 			 */
-
 			$().UItoTop({
 				easingType : 'easeOutQuart'
 			});
-
 		});
 	</script>
 	<script src="js/SmoothScroll.min.js"></script>
