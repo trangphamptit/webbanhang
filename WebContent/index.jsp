@@ -169,7 +169,7 @@
 			<div class="hovereffect">
 				<img class="img-fluid" src="images/a1.jpg" alt="">
 				<div class="overlay">
-					<h5>Áo Quần Nam</h5>
+					<h5>Áo Quần Nữ</h5>
 					<a class="info" href="women.jsp">Shop Now</a>
 				</div>
 			</div>
@@ -178,7 +178,7 @@
 			<div class="hovereffect">
 				<img class="img-fluid" src="images/a2.jpg" alt="">
 				<div class="overlay">
-					<h5>Áo Quần Nữ</h5>
+					<h5>Áo Quần Nam</h5>
 					<a class="info" href="men.jsp">Shop Now</a>
 				</div>
 			</div>
