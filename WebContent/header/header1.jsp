@@ -24,8 +24,9 @@
 					<option value="shop.jsp">ALL</option>
 					<%!ArrayList<Menu> menuCha = MenuDao.getMenuCha();%>
 					<%
-						for (int i = 1; i < menuCha.size(); i++) {
+						for (int i = 0; i < menuCha.size(); i++) {
 					%>
+					
 					<optgroup label="<%=menuCha.get(i).getTenMenu()%>">
 						<%
 							ArrayList<Menu> menuCon = MenuDao.getMenuCon(menuCha.get(i).getMaMenu());
@@ -49,18 +50,6 @@
 				function myFunction() {
 					    var x = document.getElementById("mySelect").value;
 					    window.location.assign(x)
-					
-					
-					/*var x = document.getElementById("select").value;
-					document.getElementById("demo").innerHTML = x;*/
-				 	/*var link = obj.value;
-					window.location.assign("link");
-				
-					
-					/*
-					window.location.assign(document.forms["s"].category.value)
-				 
-				alern(document.forms["s"].category.value);*/
 				 
 				}
 		</script>

@@ -202,7 +202,7 @@
 		<div class="container">
 			<div class="new_arrivals">
 				<h4 class="rad-txt text-capitalize">SẢN PHẨM THƯỜNG ĐƯỢC XEM
-					CÙNG in</h4>
+					CÙNG</h4>
 				<!-- card group 2 -->
 				<div class="card-group my-5">
 					<!-- card -->
