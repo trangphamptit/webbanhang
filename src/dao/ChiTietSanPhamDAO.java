@@ -76,7 +76,34 @@ public class ChiTietSanPhamDAO {
         return sanPham;
     }
 	
-	
+	public static ArrayList<ChiTietSanPham> getAllSanPham(int menuCha) throws SQLException{	// 1: nam
+		Connection connection = KetNoi.getConnection();
+		int temp1, temp2;
+		if(menuCha == 1) {
+			temp1 = 0;
+			temp2 = 7;
+		}else {
+			temp1 = 7;
+			temp2 = 16;
+		}
+        String sql = "SELECT * FROM chitietsanpham WHERE maNhom > ? AND maNhom <= ?";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setInt(1, temp1);
+        ps.setInt(2, temp2);
+        ResultSet rs = ps.executeQuery();
+        
+        ArrayList<ChiTietSanPham> list = new ArrayList<>();
+        while (rs.next()) {
+			ChiTietSanPham sanPham = new ChiTietSanPham();
+			sanPham.setMaSanPham(rs.getInt("maSanPham"));
+            sanPham.setTenSanPham(rs.getString("tenSanPham"));
+            sanPham.setHinhAnh(rs.getString("hinhAnh"));
+            sanPham.setGia(rs.getInt("gia"));
+            sanPham.setGiaGiam(rs.getLong("giaGiam"));
+            list.add(sanPham);
+        }
+	return list;
+	}
 	public static void main(String[] args) {
 		try {
 			ArrayList< ChiTietSanPham> sanPham= getCardsData(2);
