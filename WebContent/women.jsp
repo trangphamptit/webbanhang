@@ -1,4 +1,4 @@
-import="model.ChiTietSanPham"%>
+<%@page import="model.ChiTietSanPham"%>
 <%@page import="dao.ChiTietSanPhamDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
