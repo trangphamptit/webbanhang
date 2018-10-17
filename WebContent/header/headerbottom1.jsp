@@ -21,12 +21,12 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mx-auto text-center">
 				<li class="nav-item"><a class="nav-link  active"
-					href="index.jsp">Home <span class="sr-only">(current)</span>
+					href="index.html">Home <span class="sr-only">(current)</span>
 				</a></li>
 
 				<%!ArrayList<Menu> menuCha = MenuDao.getMenuCha();%>
 				<%
-					for (int j = 1; j < menuCha.size(); j++) {
+					for (int j = 0; j < menuCha.size(); j++) {
 				%>
 				<li class="nav-item dropdown has-mega-menu"
 					style="position: static;"><a class="nav-link dropdown-toggle"
