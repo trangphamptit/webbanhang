@@ -1,3 +1,4 @@
+<%@page import="model.ChiTietSanPham"%>
 <%@page import="dao.ChiTietSanPhamDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -14,7 +15,6 @@
 	addEventListener("load", function() {
 		setTimeout(hideURLbar, 0);
 	}, false);
-
 	function hideURLbar() {
 		window.scrollTo(0, 1);
 	}
@@ -262,19 +262,64 @@
 					<%
 						ChiTietSanPhamDAO ctsp = new ChiTietSanPhamDAO();
 						String maNhom = "";
+						int i = 0;
+						if(request.getParameter("nhom") == null){
+							i = 1;
+						}
 						if(request.getParameter("nhom") != null){
 							maNhom = request.getParameter("nhom");
-							
 						}
-						
 					%>
 					<div class="card-group inside-data0">
+						<%
+							if(i == 0){
+						%>
 						<script type="text/javascript">
 							hello(0, <%=maNhom%>);
 						</script>
+						<%
+							}else{
+								for(ChiTietSanPham sp : ChiTietSanPhamDAO.getAllSanPham(0)){
+						%>
+						<div class="col-lg-3 col-sm-6 p-0">
+								<div class="card product-men p-3">
+									<div class="men-thumb-item">
+										<img src="<%=sp.getHinhAnh() %>" alt="img" class="card-img-top">
+										<div class="men-cart-pro">
+											<div class="inner-men-cart-pro">
+												<a href="Detail?id=<%=sp.getMaSanPham() %>" class="link-product-add-cart">Quick View</a>
+											</div>
+										</div>
+									</div>
+									<!-- card body -->
+									<div class="card-body  py-3 px-2">
+										<h5 class="card-title text-capitalize"><%=sp.getTenSanPham() %></h5>
+										<div class="card-text d-flex justify-content-between">
+											<p class="text-dark font-weight-bold">$<%=sp.getGiaGiam() %></p>
+											<p class="line-through">$<%=sp.getGia() %></p>
+										</div>
+									</div>
+									<!-- card footer -->
+									<div class="card-footer d-flex justify-content-end">
+										<form action="#" method="post">
+											<input type="hidden" name="cmd" value="_cart">
+											<input type="hidden" name="add" value="1">
+											<input type="hidden" name="id" value="<%=sp.getMaSanPham()%>">
+											<input type="hidden" name="hub_item" value="<%=sp.getTenSanPham() %>">
+											<input type="hidden" name="amount" value="<%=sp.getGiaGiam() %>">
+											<button type="submit" class="hub-cart phub-cart btn">
+												<i class="fa fa-cart-plus" aria-hidden="false"></i>
+											</button>
+											<a href="#" data-toggle="modal" data-target="#myModal1"></a>
+										</form>
+									</div>
+								</div>
+							</div>
+						<%
+								}
+							}
+						%>
 					</div>
-					<!-- //card group 1-->
-					
 				</div>
 			</div>
 		</div>
@@ -309,7 +354,6 @@
 			document.getElementById("password1").onchange = validatePassword;
 			document.getElementById("password2").onchange = validatePassword;
 		}
-
 		function validatePassword() {
 			var pass2 = document.getElementById("password2").value;
 			var pass1 = document.getElementById("password1").value;
@@ -326,13 +370,10 @@
 	<script src="js/minicart.js"></script>
 	<script>
 		hub.render();
-
 		hub.cart.on('new_checkout', function(evt) {
 			var items, len, i;
-
 			if (this.subtotal() > 0) {
 				items = this.items();
-
 				for (i = 0, len = items.length; i < len; i++) {
 				}
 			}
@@ -361,7 +402,6 @@
 							"$" + $("#slider-range").slider("values", 0)
 									+ " - $"
 									+ $("#slider-range").slider("values", 1));
-
 				}); //]]>
 	</script>
 	<!-- //price range (top products) -->
@@ -391,11 +431,9 @@
 				easingType: 'linear' 
 				};
 			 */
-
 			$().UItoTop({
 				easingType : 'easeOutQuart'
 			});
-
 		});
 	</script>
 	<!-- //here ends scrolling icon -->
