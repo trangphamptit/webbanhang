@@ -21,7 +21,7 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mx-auto text-center">
 				<li class="nav-item"><a class="nav-link  active"
-					href="index.html">Home <span class="sr-only">(current)</span>
+					href="index.jsp">Home <span class="sr-only">(current)</span>
 				</a></li>
 
 				<%!ArrayList<Menu> menuCha = MenuDao.getMenuCha();%>
@@ -59,9 +59,9 @@
 									}
 								%>
 								<!-- 								<div class="col-md-4"> -->
-								<!-- 									<a class="dropdown-item" href="men.html">T-Shirts</a>  -->
-								<!-- 									<a class="dropdown-item" href="men.html">Coats</a>  -->
-								<!-- 									<a class="dropdown-item" href="men.html">Shirts</a> -->
+								<!-- 									<a class="dropdown-item" href="men.jsp">T-Shirts</a>  -->
+								<!-- 									<a class="dropdown-item" href="men.jsp">Coats</a>  -->
+								<!-- 									<a class="dropdown-item" href="men.jsp">Shirts</a> -->
 								<!-- 								</div> -->
 							</div>
 						</div>
@@ -74,9 +74,9 @@
 
 				
 
-				<li class="nav-item"><a class="nav-link" href="about.html">About</a>
+				<li class="nav-item"><a class="nav-link" href="about.jsp">About</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a>
+				<li class="nav-item"><a class="nav-link" href="contact.jsp">Contact</a>
 				</li>
 			</ul>
 		</div>

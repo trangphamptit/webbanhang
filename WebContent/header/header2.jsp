@@ -9,7 +9,7 @@
 	<nav class="top_nav d-flex pt-3 pb-1">
 		<!-- logo -->
 		<h1>
-			<a class="navbar-brand" href="index.html">fh </a>
+			<a class="navbar-brand" href="index.jsp">fh </a>
 		</h1>
 		<!-- //logo -->
 		<div class="w3ls_right_nav ml-auto d-flex">
